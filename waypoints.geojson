@@ -1,0 +1,5145 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.553056,
+          30.537222
+        ]
+      },
+      "properties": {
+        "name": "ABATO",
+        "raw_coordinates": "303214N 0083311W",
+        "routes": "TMA/2 GMAD – G/UG664",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.498842,
+          31.886525
+        ]
+      },
+      "properties": {
+        "name": "ABDOR",
+        "raw_coordinates": "315311.49N 0072955.83W",
+        "routes": "H/UH400 – M/UM372 – Z/UZ801",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.746653,
+          35.446114
+        ]
+      },
+      "properties": {
+        "name": "ABGIS",
+        "raw_coordinates": "352646.01N 0034447.95W",
+        "routes": "IAF RNAV (GNSS) RWY 17 AD GMTA",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.289722,
+          35.804722
+        ]
+      },
+      "properties": {
+        "name": "ABIRO",
+        "raw_coordinates": "354817N 0061723W",
+        "routes": "TMA/1 GMTT –N/UN726",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.234872,
+          34.449028
+        ]
+      },
+      "properties": {
+        "name": "ABKAN",
+        "raw_coordinates": "342656.50N 0021405.54W",
+        "routes": "Point à l’intérieur de la TMA GMFO",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.833333,
+          33.9
+        ]
+      },
+      "properties": {
+        "name": "ABMIL",
+        "raw_coordinates": "335400N 0075000W",
+        "routes": "Jonction avec UN871 DEP GMMX",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.833333,
+          35.413889
+        ]
+      },
+      "properties": {
+        "name": "ABODA",
+        "raw_coordinates": "352450N 0075000W",
+        "routes": "A857 – R/UR722 – UN857",
+        "fra_relevance": "FRA(I)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.801667,
+          32.848889
+        ]
+      },
+      "properties": {
+        "name": "ABTIR",
+        "raw_coordinates": "325056N 0124806W",
+        "routes": "UN873",
+        "fra_relevance": "FRA(I)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.572844,
+          35.966667
+        ]
+      },
+      "properties": {
+        "name": "ADILI",
+        "raw_coordinates": "355800.00N 0093422.24W",
+        "routes": "FIR LPPC/GMMM",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.028333,
+          35.833333
+        ]
+      },
+      "properties": {
+        "name": "ADKIM",
+        "raw_coordinates": "355000N 0060142W",
+        "routes": "Point de sortie FIR GMMM/LECM",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.284561,
+          34.840575
+        ]
+      },
+      "properties": {
+        "name": "ADRER",
+        "raw_coordinates": "345026.07N 0021704.42W",
+        "routes": "Point à l’intérieur de la TMA GMFO",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.310278,
+          35.833333
+        ]
+      },
+      "properties": {
+        "name": "ADUBI",
+        "raw_coordinates": "355000N 0061837W",
+        "routes": "FIR GMMM/LECM – UN871",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.496667,
+          30.727778
+        ]
+      },
+      "properties": {
+        "name": "AGALI",
+        "raw_coordinates": "304340N 0092948W",
+        "routes": "TMA/1 GMAD – R724",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.094753,
+          30.314628
+        ]
+      },
+      "properties": {
+        "name": "AGAMU",
+        "raw_coordinates": "301852,66N 0090541,11W",
+        "routes": "Point TMA GMAD",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.314444,
+          34.116667
+        ]
+      },
+      "properties": {
+        "name": "AGDAL",
+        "raw_coordinates": "340700N 0071852W",
+        "routes": "TMA GMMN – G/UG5",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.199483,
+          32.020453
+        ]
+      },
+      "properties": {
+        "name": "AGOVA",
+        "raw_coordinates": "320113.63N 0071158.14W",
+        "routes": "H/UH400 – M/UM372 – L/UL102 – W/UW900",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.95,
+          35.966667
+        ]
+      },
+      "properties": {
+        "name": "AKUDA",
+        "raw_coordinates": "355800N 0085700W",
+        "routes": "FIR GMMM/LPPC – UN858",
+        "fra_relevance": "FRA(X)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.746478,
+          34.219853
+        ]
+      },
+      "properties": {
+        "name": "ALKIX",
+        "raw_coordinates": "341311.47N 0044447.32W",
+        "routes": "TMA/1 GMFF",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.259536,
+          33.927897
+        ]
+      },
+      "properties": {
+        "name": "AMKAS",
+        "raw_coordinates": "335540.43N 0051534.33W",
+        "routes": "TMA/1 GMFF",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.0225,
+          29.816667
+        ]
+      },
+      "properties": {
+        "name": "AMLOK",
+        "raw_coordinates": "294900N 0100121W",
+        "routes": "TMA/2 GMAD – A600",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.883333,
+          35.966667
+        ]
+      },
+      "properties": {
+        "name": "AMSEL",
+        "raw_coordinates": "355800N 0075300W",
+        "routes": "FIR GMMM/LPPC – R/UR722",
+        "fra_relevance": "FRA(EX)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.777222,
+          30.349444
+        ]
+      },
+      "properties": {
+        "name": "ARGAB",
+        "raw_coordinates": "302058N 0094638W",
+        "routes": "Point de cheminement à l’intérieur TMA/1 GMAD",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.626944,
+          33.889444
+        ]
+      },
+      "properties": {
+        "name": "ARIAM",
+        "raw_coordinates": "335322N 0013737W",
+        "routes": "Point d’entrée/sortie FIR GMMM/DAAA – L/UL102 –\nUT900 – UM999",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.553333,
+          29.930833
+        ]
+      },
+      "properties": {
+        "name": "ARSOL",
+        "raw_coordinates": "295551N 0093312W",
+        "routes": "TMA/1 GMAD – R975",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.711667,
+          35.0
+        ]
+      },
+      "properties": {
+        "name": "ASGAM",
+        "raw_coordinates": "350000N 0124242W",
+        "routes": "Point de sortie FIR NAT",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.204056,
+          34.325811
+        ]
+      },
+      "properties": {
+        "name": "ATVAR",
+        "raw_coordinates": "341932.92N 0051214.60W",
+        "routes": "TMA/2 GMFF- M/UM240",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.170833,
+          30.011944
+        ]
+      },
+      "properties": {
+        "name": "BABNA",
+        "raw_coordinates": "300043N 0101015W",
+        "routes": "TMA/2 GMAD – G849",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.653056,
+          30.317222
+        ]
+      },
+      "properties": {
+        "name": "BAGBO",
+        "raw_coordinates": "301902N 0053911W",
+        "routes": "Point d’entrée/sortie FIR GMMM/DAAA – UJ744",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.941667,
+          35.042222
+        ]
+      },
+      "properties": {
+        "name": "BAKIM",
+        "raw_coordinates": "350232N 0065630W",
+        "routes": "Jonction avec UN871 DEP GMMN/GMME",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.450833,
+          35.833333
+        ]
+      },
+      "properties": {
+        "name": "BAMBA",
+        "raw_coordinates": "355000N 0062703W",
+        "routes": "FIR GMMM/LPPC – N/UN726",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.9,
+          32.246944
+        ]
+      },
+      "properties": {
+        "name": "BARAM",
+        "raw_coordinates": "321449N 0085400W",
+        "routes": "G/UG5",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.930556,
+          34.903056
+        ]
+      },
+      "properties": {
+        "name": "BARIS",
+        "raw_coordinates": "345411N 0055550W",
+        "routes": "Intersection voies aériennes B/UB11–H/UH104-\nN/UN10",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.023333,
+          35.966667
+        ]
+      },
+      "properties": {
+        "name": "BAROK",
+        "raw_coordinates": "355800N 0100124W",
+        "routes": "FIR GMMM/LPPC – UN873",
+        "fra_relevance": "FRA(EX)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.666667,
+          35.833333
+        ]
+      },
+      "properties": {
+        "name": "BARPA",
+        "raw_coordinates": "355000N 0054000W",
+        "routes": "FIR GMMM/LECM –UM985",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.454622,
+          32.094103
+        ]
+      },
+      "properties": {
+        "name": "BENOV",
+        "raw_coordinates": "320538.77N 0082716.64W",
+        "routes": "TMA GMMX– R/UR975",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.243611,
+          34.628333
+        ]
+      },
+      "properties": {
+        "name": "BENTU",
+        "raw_coordinates": "343742N 0111437W",
+        "routes": "UN 873",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.235833,
+          35.833333
+        ]
+      },
+      "properties": {
+        "name": "BERUM",
+        "raw_coordinates": "355000N 0031409W",
+        "routes": "FIR GMMM/LECM – G/UG850",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.448333,
+          35.966667
+        ]
+      },
+      "properties": {
+        "name": "BEXAL",
+        "raw_coordinates": "355800N 0112654W",
+        "routes": "FIR GMMM/LPPC – UN866",
+        "fra_relevance": "FRA(EX)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.822778,
+          30.895556
+        ]
+      },
+      "properties": {
+        "name": "BIDLA",
+        "raw_coordinates": "305344N 0084922W",
+        "routes": "TMA/2 GMAD – G/UG850",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.191667,
+          33.286547
+        ]
+      },
+      "properties": {
+        "name": "BIRVO",
+        "raw_coordinates": "331711.57N 0081130.00W",
+        "routes": "Point à l’intérieur de la TMA GMMN",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.893611,
+          33.647222
+        ]
+      },
+      "properties": {
+        "name": "BISMI",
+        "raw_coordinates": "333850N 0065337W",
+        "routes": "R975 – TMA GMMN",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.8375,
+          33.348333
+        ]
+      },
+      "properties": {
+        "name": "BODNI",
+        "raw_coordinates": "332054N 0075015W",
+        "routes": "TMA GMMN",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.587767,
+          34.392369
+        ]
+      },
+      "properties": {
+        "name": "BOKPA",
+        "raw_coordinates": "342332.53N 0043515.96W",
+        "routes": "TMA/2 GMFF – G/UG850",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.141667,
+          27.666667
+        ]
+      },
+      "properties": {
+        "name": "BULIS",
+        "raw_coordinates": "274000N 0090830W",
+        "routes": "FIRs GMMM/GCCC/GOOO – UR977 – UM372",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.838333,
+          30.180833
+        ]
+      },
+      "properties": {
+        "name": "BULOK",
+        "raw_coordinates": "301051N 0095018W",
+        "routes": "G/UG850",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.256433,
+          33.946089
+        ]
+      },
+      "properties": {
+        "name": "DEMUM",
+        "raw_coordinates": "335645.92N 0051523.16W",
+        "routes": "TMA/1 GMFF – A411",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.589444,
+          31.051667
+        ]
+      },
+      "properties": {
+        "name": "DENOB",
+        "raw_coordinates": "310306N 0093522W",
+        "routes": "TMA/2 GMAD – R724",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.31855,
+          30.38995
+        ]
+      },
+      "properties": {
+        "name": "DESUM",
+        "raw_coordinates": "302323,82N 0131906,78W",
+        "routes": "FIR GMMM/GCCC",
+        "fra_relevance": "FRA(E)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.597556,
+          34.049175
+        ]
+      },
+      "properties": {
+        "name": "DETAD",
+        "raw_coordinates": "340257.03N 0043551.20W",
+        "routes": "TMA/1 GMFF",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.718333,
+          29.248056
+        ]
+      },
+      "properties": {
+        "name": "DEVLA",
+        "raw_coordinates": "291453N 0124306W",
+        "routes": "FIR GMMM/GCCC – G/UG850",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.728236,
+          33.043711
+        ]
+      },
+      "properties": {
+        "name": "DEVNO",
+        "raw_coordinates": "330237.36N 0074341.65W",
+        "routes": "Point à l’intérieur de la TMA GMMN",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.205039,
+          26.928558
+        ]
+      },
+      "properties": {
+        "name": "DEXAD",
+        "raw_coordinates": "265542.81N 0131218.14W",
+        "routes": "IAF RNAV (GNSS) RWY 02 AD GMML",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.688889,
+          29.619444
+        ]
+      },
+      "properties": {
+        "name": "DIDAN",
+        "raw_coordinates": "293710N 0094120W",
+        "routes": "TMA/2 GMAD – R975",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.025919,
+          32.741697
+        ]
+      },
+      "properties": {
+        "name": "DIDOV",
+        "raw_coordinates": "324430,11N 0060133,31W",
+        "routes": "H/UH119 – M/UM372",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.377222,
+          35.130278
+        ]
+      },
+      "properties": {
+        "name": "DIGEX",
+        "raw_coordinates": "350749.00N 0022238.00W",
+        "routes": "TMA GMFO – W/UW700",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.398889,
+          31.971944
+        ]
+      },
+      "properties": {
+        "name": "DIMSA",
+        "raw_coordinates": "315819N 0122356W",
+        "routes": "UN858",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.516244,
+          33.969978
+        ]
+      },
+      "properties": {
+        "name": "DIRAD",
+        "raw_coordinates": "335811.92N 0063058.48W",
+        "routes": "B/UB11- TMA GMMN",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -15.607778,
+          24.148611
+        ]
+      },
+      "properties": {
+        "name": "DISMA",
+        "raw_coordinates": "240855N 0153628W",
+        "routes": "TMA GMMH – A600F",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.799722,
+          29.0
+        ]
+      },
+      "properties": {
+        "name": "DIVUX",
+        "raw_coordinates": "290000N 0084759W",
+        "routes": "UM372",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.242778,
+          30.231667
+        ]
+      },
+      "properties": {
+        "name": "DOGAN",
+        "raw_coordinates": "301354N 0101434W",
+        "routes": "TMA/2 GMAD - UG664",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.579444,
+          33.015556
+        ]
+      },
+      "properties": {
+        "name": "DOMOG",
+        "raw_coordinates": "330056N 0093446W",
+        "routes": "Point de transfert secteur WN/S",
+        "fra_relevance": "FRA(EX)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.575,
+          33.6975
+        ]
+      },
+      "properties": {
+        "name": "DONAS",
+        "raw_coordinates": "334151N 0063430W",
+        "routes": "Point à l’intérieur TMA GMMN–R/UR975",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.474722,
+          34.3625
+        ]
+      },
+      "properties": {
+        "name": "DOTIV",
+        "raw_coordinates": "342145N 0032829W",
+        "routes": "A/UA411",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.516667,
+          27.666667
+        ]
+      },
+      "properties": {
+        "name": "ECHED",
+        "raw_coordinates": "274000N 0103100W",
+        "routes": "FIR GMMM/GCCC/GOOO – R/UR975-Z/UZ966-Z/UZ967",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.186667,
+          30.7025
+        ]
+      },
+      "properties": {
+        "name": "EKTAL",
+        "raw_coordinates": "304209N 0091112W",
+        "routes": "TMA/1 GMAD",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.351158,
+          34.12045
+        ]
+      },
+      "properties": {
+        "name": "EMKOK",
+        "raw_coordinates": "340713.62N 0042104.17W",
+        "routes": "TMA2 GMFF – A411",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.504072,
+          34.130372
+        ]
+      },
+      "properties": {
+        "name": "ENNAV",
+        "raw_coordinates": "340749.34N 0063014.66W",
+        "routes": "IAF STARy CONV RWY21 AD GMME",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.39,
+          32.919167
+        ]
+      },
+      "properties": {
+        "name": "ERLAM",
+        "raw_coordinates": "325509N 0062324W",
+        "routes": "H/UH119 – UG850",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.136389,
+          33.015278
+        ]
+      },
+      "properties": {
+        "name": "ERMED",
+        "raw_coordinates": "330055N 0100811W",
+        "routes": "A857 – UN857",
+        "fra_relevance": "FRA(I)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.173056,
+          34.04
+        ]
+      },
+      "properties": {
+        "name": "ESALA",
+        "raw_coordinates": "340224N 0071023W",
+        "routes": "Point à l’intérieur TMA GMMN",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.686389,
+          35.833333
+        ]
+      },
+      "properties": {
+        "name": "ESAMI",
+        "raw_coordinates": "355000N 0024111W",
+        "routes": "M/UM372",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.320942,
+          26.872253
+        ]
+      },
+      "properties": {
+        "name": "ETAVO",
+        "raw_coordinates": "265220.11N 0131915.39W",
+        "routes": "IAF RNAV (GNSS) RWY 02 AD GMML",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.420628,
+          33.564672
+        ]
+      },
+      "properties": {
+        "name": "EVDOL",
+        "raw_coordinates": "333352.82N 0072514.26W",
+        "routes": "Point à l’intérieur TMA GMMN",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.426461,
+          34.2289
+        ]
+      },
+      "properties": {
+        "name": "EVOXO",
+        "raw_coordinates": "341344.04N 0022535.26W",
+        "routes": "TMA GMFO – G/UG664",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.811667,
+          32.680556
+        ]
+      },
+      "properties": {
+        "name": "FACAS",
+        "raw_coordinates": "324050N 0074842W",
+        "routes": "TMA GMMN – B/UB11",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.844117,
+          34.251186
+        ]
+      },
+      "properties": {
+        "name": "FAHIM",
+        "raw_coordinates": "341504.27N 0065038.82W",
+        "routes": "IAF STARy CONV RWY21 AD GMME",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.100278,
+          32.719167
+        ]
+      },
+      "properties": {
+        "name": "FOBAC",
+        "raw_coordinates": "324309N 0080601W",
+        "routes": "TMA GMMN – R/UR722",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.143611,
+          35.833333
+        ]
+      },
+      "properties": {
+        "name": "GALTO",
+        "raw_coordinates": "355000N 0050837W",
+        "routes": "FIR GMMM/LECM – B/UB11 – UN869",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.627442,
+          33.751089
+        ]
+      },
+      "properties": {
+        "name": "GIPUD",
+        "raw_coordinates": "334503.92N 0043738.79W",
+        "routes": "TMA/1 GMFF",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.546389,
+          26.740556
+        ]
+      },
+      "properties": {
+        "name": "GIRAL",
+        "raw_coordinates": "264426N 0133247W",
+        "routes": "TMA GMML – A600F",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -15.888611,
+          24.239444
+        ]
+      },
+      "properties": {
+        "name": "GITEM",
+        "raw_coordinates": "241422N 0155319W",
+        "routes": "TMA GMMH",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.076739,
+          33.182844
+        ]
+      },
+      "properties": {
+        "name": "GODPO",
+        "raw_coordinates": "331058.24N 0070436.26W",
+        "routes": "Point à l’intérieur TMA GMMN",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.575556,
+          31.318056
+        ]
+      },
+      "properties": {
+        "name": "GOSNO",
+        "raw_coordinates": "311905N 0083432W",
+        "routes": "H/UH400",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.821667,
+          30.1475
+        ]
+      },
+      "properties": {
+        "name": "GOSPI",
+        "raw_coordinates": "300851N 0094918W",
+        "routes": "TMA/1 GMAD – G849",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.981667,
+          33.1975
+        ]
+      },
+      "properties": {
+        "name": "GOVAS",
+        "raw_coordinates": "331151N 0065854W",
+        "routes": "Point à l’intérieur TMA GMMN– H/UH119",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.789167,
+          34.444444
+        ]
+      },
+      "properties": {
+        "name": "IBALU",
+        "raw_coordinates": "342640N 0084721W",
+        "routes": "A857 – UN857 – H/UH899 – R/UR724",
+        "fra_relevance": "FRA(I)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.400003,
+          33.646317
+        ]
+      },
+      "properties": {
+        "name": "IBEVO",
+        "raw_coordinates": "333846.74N 0042400.01W",
+        "routes": "TMA/2 GMFF – W/UW255",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.406111,
+          33.173889
+        ]
+      },
+      "properties": {
+        "name": "IBLIV",
+        "raw_coordinates": "331026N 0112422W",
+        "routes": "UN858",
+        "fra_relevance": "FRA(I)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.886517,
+          35.475181
+        ]
+      },
+      "properties": {
+        "name": "IDMEB",
+        "raw_coordinates": "352830.65N 0035311.46W",
+        "routes": "IAF RNAV (GNSS) RWY 17 AD GMTA",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.738142,
+          33.981661
+        ]
+      },
+      "properties": {
+        "name": "IPLOS",
+        "raw_coordinates": "335853.98N 0054417.31W",
+        "routes": "TMA/2 GMFF – A411",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.895944,
+          33.573489
+        ]
+      },
+      "properties": {
+        "name": "IVDAK",
+        "raw_coordinates": "333424.56N 0045345.40W",
+        "routes": "TMA/1 GMFF",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.823214,
+          35.497628
+        ]
+      },
+      "properties": {
+        "name": "IXIRI",
+        "raw_coordinates": "352951.46N 0024923.57W",
+        "routes": "M/UM372 – W/UW700",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.104078,
+          34.693003
+        ]
+      },
+      "properties": {
+        "name": "IXOBA",
+        "raw_coordinates": "344134.81N 0020614.68W",
+        "routes": "TMA GMFO (IAF BRG 238,45° / D9.0 NM/DME/OJD)",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.548333,
+          34.958889
+        ]
+      },
+      "properties": {
+        "name": "IXODA",
+        "raw_coordinates": "345732N 0053254W",
+        "routes": "H/UH104 – M/UM240",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.921683,
+          30.441225
+        ]
+      },
+      "properties": {
+        "name": "KEGAG",
+        "raw_coordinates": "302628.41N 0085518.06W",
+        "routes": "TMA/1 GMAD –G/UG664",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.114858,
+          34.139739
+        ]
+      },
+      "properties": {
+        "name": "KEKIV",
+        "raw_coordinates": "340823.06N 0050653.49W",
+        "routes": "TMA/1 GMFF",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.72,
+          31.014444
+        ]
+      },
+      "properties": {
+        "name": "KEMEX",
+        "raw_coordinates": "310052N 0094312W",
+        "routes": "TMA/2 GMAD – H/UH300",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -15.301667,
+          31.300833
+        ]
+      },
+      "properties": {
+        "name": "KONBA",
+        "raw_coordinates": "311803N 0151806W",
+        "routes": "FIR GMMM/GCCC – UN866",
+        "fra_relevance": "FRA(EX)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.802217,
+          31.666
+        ]
+      },
+      "properties": {
+        "name": "KOPAB",
+        "raw_coordinates": "313957.60N 0094807.98W",
+        "routes": "IAF RNAV (GNSS) RWY 16 AD GMMI",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.578333,
+          29.731389
+        ]
+      },
+      "properties": {
+        "name": "KORAL",
+        "raw_coordinates": "294353N 0123442W",
+        "routes": "FIR GMMM/GCCC – G/UG5 – UN871",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.239167,
+          35.833333
+        ]
+      },
+      "properties": {
+        "name": "KORIS",
+        "raw_coordinates": "355000N 0061421W",
+        "routes": "FIR GMMM/LECM – GUG 5",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.416667,
+          35.833333
+        ]
+      },
+      "properties": {
+        "name": "KORNO",
+        "raw_coordinates": "355000N 0072500W",
+        "routes": "FIR GMMM/LECM – A857 – UN857",
+        "fra_relevance": "FRA(E)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.271983,
+          33.152503
+        ]
+      },
+      "properties": {
+        "name": "KOTAG",
+        "raw_coordinates": "330909.01N 0071619.14W",
+        "routes": "Point à l’intérieur TMA GMMN",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.911667,
+          34.261111
+        ]
+      },
+      "properties": {
+        "name": "KUBIL",
+        "raw_coordinates": "341540N 0125442W",
+        "routes": "UN866",
+        "fra_relevance": "FRA(I)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.671933,
+          31.808572
+        ]
+      },
+      "properties": {
+        "name": "KUDAX",
+        "raw_coordinates": "314830.86N 0074018.96W",
+        "routes": "H/UH400 – M/UM372",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.260833,
+          29.0
+        ]
+      },
+      "properties": {
+        "name": "KUVEL",
+        "raw_coordinates": "290000N 0091539W",
+        "routes": "UR977",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.849722,
+          33.135833
+        ]
+      },
+      "properties": {
+        "name": "LACAJ",
+        "raw_coordinates": "330809N 0065059W",
+        "routes": "TMA GMMN – H/UH119",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.738333,
+          34.187222
+        ]
+      },
+      "properties": {
+        "name": "LAKAM",
+        "raw_coordinates": "341114N 0074418W",
+        "routes": "TMA GMMN – R/UR722",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.487267,
+          35.785872
+        ]
+      },
+      "properties": {
+        "name": "LAMAD",
+        "raw_coordinates": "354709.14N 0052914.16W",
+        "routes": "TMA/1 GMTT – M143",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.393822,
+          31.835958
+        ]
+      },
+      "properties": {
+        "name": "LANBA",
+        "raw_coordinates": "315009.45N 0082337.76W",
+        "routes": "TMA GMMX",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.453333,
+          34.168889
+        ]
+      },
+      "properties": {
+        "name": "LAPNO",
+        "raw_coordinates": "341008N 0082712W",
+        "routes": "H/UH899",
+        "fra_relevance": "FRA(EX)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.465,
+          31.115278
+        ]
+      },
+      "properties": {
+        "name": "LARAP",
+        "raw_coordinates": "310655N 0062754W",
+        "routes": "TMA GMMZ – G/UG664",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -16.132511,
+          23.580794
+        ]
+      },
+      "properties": {
+        "name": "LARMO",
+        "raw_coordinates": "233450.86N 0160757.04W",
+        "routes": "IAF RNAV (GNSS) RWY 03 AD GMMH",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -16.105278,
+          23.280556
+        ]
+      },
+      "properties": {
+        "name": "LASAB",
+        "raw_coordinates": "231650N 0160619W",
+        "routes": "TMA GMMH – A600F – B600G",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.826872,
+          33.364278
+        ]
+      },
+      "properties": {
+        "name": "LEGTI",
+        "raw_coordinates": "332151.40N 0044936.74W",
+        "routes": "TMA/2 GMFF –M/UM240",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -14.801111,
+          32.0
+        ]
+      },
+      "properties": {
+        "name": "LEPRU",
+        "raw_coordinates": "320000N 0144804W",
+        "routes": "Point de sortie FIR NAT",
+        "fra_relevance": "FRA(EX)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.954444,
+          35.833333
+        ]
+      },
+      "properties": {
+        "name": "LINTO",
+        "raw_coordinates": "355000N 0055716W",
+        "routes": "FIR GMMM/LECM – N/UN10",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.370833,
+          30.828889
+        ]
+      },
+      "properties": {
+        "name": "LINVA",
+        "raw_coordinates": "304944N 0072215W",
+        "routes": "TMA GMMZ – G/UG664",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.484444,
+          31.233333
+        ]
+      },
+      "properties": {
+        "name": "LISRA",
+        "raw_coordinates": "311400N 0082904W",
+        "routes": "TMA GMMX – G/UG850",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.503372,
+          32.657508
+        ]
+      },
+      "properties": {
+        "name": "LOBMI",
+        "raw_coordinates": "323927.03N 0073012.14W",
+        "routes": "Z801",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.197117,
+          32.124267
+        ]
+      },
+      "properties": {
+        "name": "MABAP",
+        "raw_coordinates": "320727,36N 0081149,62W",
+        "routes": "TMA GMMX – B/UB11 – R/UR722 – UN869",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.503056,
+          32.638611
+        ]
+      },
+      "properties": {
+        "name": "MABOG",
+        "raw_coordinates": "323819N 0073011W",
+        "routes": "TMA GMMN – Z/UZ801",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.752222,
+          35.414722
+        ]
+      },
+      "properties": {
+        "name": "MADOV",
+        "raw_coordinates": "352453N 0054508W",
+        "routes": "TMA/1 GMTT – M/UM240",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.777819,
+          31.525292
+        ]
+      },
+      "properties": {
+        "name": "MAGAV",
+        "raw_coordinates": "313131.05N 0084640.15W",
+        "routes": "TMA GMMX – B11",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.178514,
+          33.675894
+        ]
+      },
+      "properties": {
+        "name": "MAPIT",
+        "raw_coordinates": "334033.22N 0051042.65W",
+        "routes": "TMA/1 GMFF",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.776944,
+          34.742222
+        ]
+      },
+      "properties": {
+        "name": "MARJA",
+        "raw_coordinates": "344432N 0074637W",
+        "routes": "R/UR722",
+        "fra_relevance": "FRA(EX)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.309167,
+          31.169444
+        ]
+      },
+      "properties": {
+        "name": "MAXOR",
+        "raw_coordinates": "311010N 0071833W",
+        "routes": "TMA GMMZ – J744",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.0525,
+          31.016389
+        ]
+      },
+      "properties": {
+        "name": "MIMRO",
+        "raw_coordinates": "310059N 0090309W",
+        "routes": "TMA/2 GMAD – H4/UH00",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -14.082222,
+          31.308333
+        ]
+      },
+      "properties": {
+        "name": "MITLA",
+        "raw_coordinates": "311830N 0140456W",
+        "routes": "UN873",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.759167,
+          30.562778
+        ]
+      },
+      "properties": {
+        "name": "MOGBA",
+        "raw_coordinates": "303346N 0094533W",
+        "routes": "TMA/1 GMAD – H/UH300 – H/UH400",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.873611,
+          34.424722
+        ]
+      },
+      "properties": {
+        "name": "MOKIB",
+        "raw_coordinates": "342529N 0065225W",
+        "routes": "Point à l’intérieur TMA GMMN",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.612778,
+          31.340278
+        ]
+      },
+      "properties": {
+        "name": "MOKIR",
+        "raw_coordinates": "312025N 0073646W",
+        "routes": "TMA GMMX – J744",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.174167,
+          33.160833
+        ]
+      },
+      "properties": {
+        "name": "MOKRI",
+        "raw_coordinates": "330939N 0091027W",
+        "routes": "Point de transfert secteurs S/W – R/UR724",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.366328,
+          32.619619
+        ]
+      },
+      "properties": {
+        "name": "MOGBI",
+        "raw_coordinates": "323710.63N 0072158.78W",
+        "routes": "W/UW900",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.014586,
+          31.346431
+        ]
+      },
+      "properties": {
+        "name": "MOGVA",
+        "raw_coordinates": "312047.15N 0070052.51W",
+        "routes": "TMA GMMZ–W/UW900",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.896819,
+          33.584594
+        ]
+      },
+      "properties": {
+        "name": "MOKDA",
+        "raw_coordinates": "333504.54N 0075348.55W",
+        "routes": "Point à l’intérieur TMA GMMN",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.955833,
+          29.0
+        ]
+      },
+      "properties": {
+        "name": "MOROX",
+        "raw_coordinates": "290000N 0095721W",
+        "routes": "UR975",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.034444,
+          31.01
+        ]
+      },
+      "properties": {
+        "name": "NAMIR",
+        "raw_coordinates": "310036N 0090204W",
+        "routes": "TMA/2 GMAD – R/U975",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.956144,
+          31.400181
+        ]
+      },
+      "properties": {
+        "name": "NAPOV",
+        "raw_coordinates": "312400.65N 0075722.12W",
+        "routes": "STAR RNAV(GNSS) RWY10 GMMX",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.065,
+          33.064167
+        ]
+      },
+      "properties": {
+        "name": "NAREG",
+        "raw_coordinates": "330351N 0070354W",
+        "routes": "Point à l’intérieur TMA GMMN",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.4975,
+          35.636389
+        ]
+      },
+      "properties": {
+        "name": "NARMI",
+        "raw_coordinates": "353811N 0052951W",
+        "routes": "TMA/1 GMTT – N/UN726",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.718333,
+          33.970833
+        ]
+      },
+      "properties": {
+        "name": "NASRO",
+        "raw_coordinates": "335815N 0074306W",
+        "routes": "Point à l’intérieur TMA GMMN(Point d’attente STAR\nGMMN)",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.335619,
+          34.672067
+        ]
+      },
+      "properties": {
+        "name": "NEMVA",
+        "raw_coordinates": "344019.44N 0022008.23W",
+        "routes": "Point à l’intérieur de la TMA GMFO",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.837036,
+          33.329681
+        ]
+      },
+      "properties": {
+        "name": "NEVEK",
+        "raw_coordinates": "331946.85N 0055013.33W",
+        "routes": "UG850",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.244722,
+          32.978611
+        ]
+      },
+      "properties": {
+        "name": "NEVTU",
+        "raw_coordinates": "325843N 0131441W",
+        "routes": "FIR GMMM",
+        "fra_relevance": "FRA(I)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.992222,
+          32.963333
+        ]
+      },
+      "properties": {
+        "name": "NIDEB",
+        "raw_coordinates": "325748N 0115932W",
+        "routes": "FIR GMMM",
+        "fra_relevance": "FRA(I)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.161389,
+          32.7275
+        ]
+      },
+      "properties": {
+        "name": "NIKZO",
+        "raw_coordinates": "324339N 0080941W",
+        "routes": "TMA GMMN – R/UR975",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -14.123333,
+          33.0
+        ]
+      },
+      "properties": {
+        "name": "NIPRI",
+        "raw_coordinates": "330000N 0140724W",
+        "routes": "Point de sortie FIR NAT",
+        "fra_relevance": "FRA(EX)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.366667,
+          33.194722
+        ]
+      },
+      "properties": {
+        "name": "NIRAL",
+        "raw_coordinates": "331141N 0082200W",
+        "routes": "UN871",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.02,
+          33.679444
+        ]
+      },
+      "properties": {
+        "name": "NISBA",
+        "raw_coordinates": "334046N 0090112W",
+        "routes": "H/UH500 – R/UR724",
+        "fra_relevance": "FRA(EX)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.083333,
+          31.178889
+        ]
+      },
+      "properties": {
+        "name": "NISUR",
+        "raw_coordinates": "311044N 0100500W",
+        "routes": "G/UG5",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.036111,
+          35.781389
+        ]
+      },
+      "properties": {
+        "name": "NOLRO",
+        "raw_coordinates": "354653N 0060210W",
+        "routes": "TMA/1 GMTT",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.350725,
+          33.411406
+        ]
+      },
+      "properties": {
+        "name": "NONVI",
+        "raw_coordinates": "332441.06N 0052102.61W",
+        "routes": "TMA/2 GMFF – V203",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.814167,
+          31.837778
+        ]
+      },
+      "properties": {
+        "name": "OBOGA",
+        "raw_coordinates": "315016N 0074851W",
+        "routes": "TMA GMMX – G/UG850",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.491389,
+          31.646389
+        ]
+      },
+      "properties": {
+        "name": "ODALO",
+        "raw_coordinates": "313847N 0082929W",
+        "routes": "TMA GMMX",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.242222,
+          33.993889
+        ]
+      },
+      "properties": {
+        "name": "ODAXA",
+        "raw_coordinates": "335938N 0081432W",
+        "routes": "H/UH899",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.0125,
+          35.674722
+        ]
+      },
+      "properties": {
+        "name": "ODROS",
+        "raw_coordinates": "354029N 0050045W",
+        "routes": "IAF RNAV (GNSS) RWY 24 AD GMTN",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.427222,
+          34.0
+        ]
+      },
+      "properties": {
+        "name": "OGDOR",
+        "raw_coordinates": "340000N 0132538W",
+        "routes": "Point de sortie FIR NAT",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.336667,
+          33.146667
+        ]
+      },
+      "properties": {
+        "name": "OLMAG",
+        "raw_coordinates": "330848N 0032012W",
+        "routes": "G/UG664 – W/UW255",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.071667,
+          30.640833
+        ]
+      },
+      "properties": {
+        "name": "OLOMA",
+        "raw_coordinates": "303827N 0090418W",
+        "routes": "TMA/1 GMAD – G/UG850",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.840556,
+          34.848611
+        ]
+      },
+      "properties": {
+        "name": "ORSUP",
+        "raw_coordinates": "345055N 0015026W",
+        "routes": "FIR GMMM / DAAA",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.701111,
+          35.345833
+        ]
+      },
+      "properties": {
+        "name": "OSDAM",
+        "raw_coordinates": "352045N 0064204W",
+        "routes": "UM985 – UN871",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.836111,
+          33.149444
+        ]
+      },
+      "properties": {
+        "name": "OSDIV",
+        "raw_coordinates": "330858N 0135010W",
+        "routes": "UN 866",
+        "fra_relevance": "FRA(I)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.314167,
+          35.966667
+        ]
+      },
+      "properties": {
+        "name": "OSLAD",
+        "raw_coordinates": "355800N 0081851W",
+        "routes": "FIR GMMM / LPPC – R/UR724",
+        "fra_relevance": "FRA(EX)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.440917,
+          35.833333
+        ]
+      },
+      "properties": {
+        "name": "PEKOP",
+        "raw_coordinates": "355000.0N 0032627.3W",
+        "routes": "Point d’entrée/sortie FIR GMMM/LECM",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.690497,
+          32.85365
+        ]
+      },
+      "properties": {
+        "name": "PELAX",
+        "raw_coordinates": "325113.14N 0074125.79W",
+        "routes": "B/UB11– UN869",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.0,
+          32.275
+        ]
+      },
+      "properties": {
+        "name": "PIXEB",
+        "raw_coordinates": "321630N 0030000W",
+        "routes": "H/UH119",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.440517,
+          32.883758
+        ]
+      },
+      "properties": {
+        "name": "PIXOV",
+        "raw_coordinates": "325301.53N 0072625.86W",
+        "routes": "W/UW900",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.753336,
+          33.820831
+        ]
+      },
+      "properties": {
+        "name": "POBUB",
+        "raw_coordinates": "334914.99N 0054512.01W",
+        "routes": "TMA/2 GMFF – R975",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.047917,
+          35.833333
+        ]
+      },
+      "properties": {
+        "name": "PODES",
+        "raw_coordinates": "355000.0N 0040252.5W",
+        "routes": "BDRY FIR/UIR GMMM/LECM",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.884328,
+          31.586394
+        ]
+      },
+      "properties": {
+        "name": "POGIK",
+        "raw_coordinates": "313511.02N 0095303.58W",
+        "routes": "IAF RNAV (GNSS) RWY 16 AD GMMI",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.085014,
+          35.737603
+        ]
+      },
+      "properties": {
+        "name": "RABCA",
+        "raw_coordinates": "354415.37N 0060506.05W",
+        "routes": "IAF BRG 272° TNR DVOR/DME AD GMTT",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.231944,
+          32.69
+        ]
+      },
+      "properties": {
+        "name": "RADAF",
+        "raw_coordinates": "324124N 0061355W",
+        "routes": "IAF RNAV (GNSS) RWY 23 AD GMMD",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.179444,
+          33.003611
+        ]
+      },
+      "properties": {
+        "name": "RALEK",
+        "raw_coordinates": "330013N 0081046W",
+        "routes": "G/UG5",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.801975,
+          31.669906
+        ]
+      },
+      "properties": {
+        "name": "RAMIM",
+        "raw_coordinates": "314011.66N 0074807.11W",
+        "routes": "IAF RNAV (GNSS) RWY 28 AD GMMX",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.312561,
+          33.927214
+        ]
+      },
+      "properties": {
+        "name": "RANUL",
+        "raw_coordinates": "335537.97N 0041845.22W",
+        "routes": "TMA/2 GMFF",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.313889,
+          29.573056
+        ]
+      },
+      "properties": {
+        "name": "RATNI",
+        "raw_coordinates": "293423N 0091850W",
+        "routes": "TMA/2 GMAD",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.744731,
+          31.334061
+        ]
+      },
+      "properties": {
+        "name": "RATVA",
+        "raw_coordinates": "312002.62N 0064441.03W",
+        "routes": "TMA GMMZ –Q401",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.813344,
+          32.191428
+        ]
+      },
+      "properties": {
+        "name": "RAVMA",
+        "raw_coordinates": "321129.14N 0064848.04W",
+        "routes": "M372",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.474722,
+          33.518889
+        ]
+      },
+      "properties": {
+        "name": "RAVOL",
+        "raw_coordinates": "333108N 0082829W",
+        "routes": "H/UH500 – TMA GMMN",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.367628,
+          33.840722
+        ]
+      },
+      "properties": {
+        "name": "REVMI",
+        "raw_coordinates": "335026.60N 0072203.46W",
+        "routes": "Point à l’intérieur TMA GMMN",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.811869,
+          31.586939
+        ]
+      },
+      "properties": {
+        "name": "RINPA",
+        "raw_coordinates": "313512.98N 0074842.73W",
+        "routes": "IAF BRG 098.56°MAG/15.0 DME MAK",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.209997,
+          33.700711
+        ]
+      },
+      "properties": {
+        "name": "RIPOV",
+        "raw_coordinates": "334202.56N 0051235.99W",
+        "routes": "TMA/1 GMFF",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.383839,
+          26.976128
+        ]
+      },
+      "properties": {
+        "name": "ROLGO",
+        "raw_coordinates": "265834.06N 0132301.82W",
+        "routes": "IAF RNAV (GNSS) RWY 02 AD GMML",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.966944,
+          31.669167
+        ]
+      },
+      "properties": {
+        "name": "ROLRO",
+        "raw_coordinates": "314009N 0105801W",
+        "routes": "Point de transfert secteur WS/S",
+        "fra_relevance": "FRA(EX)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6,
+          34.601722
+        ]
+      },
+      "properties": {
+        "name": "ROMOR",
+        "raw_coordinates": "343606.20N 0023600.00W",
+        "routes": "TMA GMFO – A411",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.4925,
+          35.445278
+        ]
+      },
+      "properties": {
+        "name": "ROMSO",
+        "raw_coordinates": "352643N 0062933W",
+        "routes": "UM985– G/UG5 – M143",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.470622,
+          32.002031
+        ]
+      },
+      "properties": {
+        "name": "RUBAB",
+        "raw_coordinates": "320007.31N 0062814.24W",
+        "routes": "L/UL102 – Q/UQ401",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.632222,
+          35.833333
+        ]
+      },
+      "properties": {
+        "name": "RUNAX",
+        "raw_coordinates": "355000N 0063756W",
+        "routes": "FIR GMMM/LECM – UL82",
+        "fra_relevance": "FRA(E)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.816389,
+          28.906111
+        ]
+      },
+      "properties": {
+        "name": "RUSIK",
+        "raw_coordinates": "285422N 0124859W",
+        "routes": "FIR GMMM/GCCC – G849 – UN869",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.333333,
+          33.733889
+        ]
+      },
+      "properties": {
+        "name": "SADIC",
+        "raw_coordinates": "334402N 0062000W",
+        "routes": "TMA GMMN – R/UR975",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.906944,
+          33.373611
+        ]
+      },
+      "properties": {
+        "name": "SAKOF",
+        "raw_coordinates": "332225N 0065425W",
+        "routes": "Point à l’intérieur TMA GMMN",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -14.415556,
+          30.899722
+        ]
+      },
+      "properties": {
+        "name": "SAMAR",
+        "raw_coordinates": "305359N 0142456W",
+        "routes": "FIR GMMM/GCCC – UN873",
+        "fra_relevance": "FRA(EX)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.276111,
+          34.320278
+        ]
+      },
+      "properties": {
+        "name": "SALCA",
+        "raw_coordinates": "341913N 0081634W",
+        "routes": "UA411",
+        "fra_relevance": "FRA(EX)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.674167,
+          26.998889
+        ]
+      },
+      "properties": {
+        "name": "SAWBA",
+        "raw_coordinates": "265956N 0124027W",
+        "routes": "TMA GMML-Z/UZ967",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.339722,
+          31.465525
+        ]
+      },
+      "properties": {
+        "name": "SIVSO",
+        "raw_coordinates": "312755.89N 0082023.00W",
+        "routes": "IAF STAR RNAV(GNSS) RWY10 AD GMMX",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.004819,
+          34.890633
+        ]
+      },
+      "properties": {
+        "name": "SOBGO",
+        "raw_coordinates": "345326.28N 0030017.35W",
+        "routes": "IAF RNAV(GNSS) RWY08;RWY26 AD GMMW",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.916667,
+          35.4
+        ]
+      },
+      "properties": {
+        "name": "SOBMA",
+        "raw_coordinates": "352400N 0055500W",
+        "routes": "TMA/1 GMTT – N10",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.418517,
+          33.458339
+        ]
+      },
+      "properties": {
+        "name": "SODSA",
+        "raw_coordinates": "332730.02N 0052506.66W",
+        "routes": "TMA/2 GMFF – M372",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.595278,
+          27.666667
+        ]
+      },
+      "properties": {
+        "name": "SOLNA",
+        "raw_coordinates": "274000N 0123543W",
+        "routes": "FIR GMMM/GCCC – A/UA600",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.199167,
+          30.0725
+        ]
+      },
+      "properties": {
+        "name": "SOMOM",
+        "raw_coordinates": "300421N 0101157W",
+        "routes": "TMA/2 GMAD – G/UG850",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.101944,
+          30.012222
+        ]
+      },
+      "properties": {
+        "name": "SONSO",
+        "raw_coordinates": "300044N 0120607W",
+        "routes": "UN871 – G/UG5 – UG664",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.597389,
+          30.153725
+        ]
+      },
+      "properties": {
+        "name": "SOPAB",
+        "raw_coordinates": "300913.41N 0093550.60W",
+        "routes": "Point TMA GMAD",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.168889,
+          34.172778
+        ]
+      },
+      "properties": {
+        "name": "SOVAL",
+        "raw_coordinates": "341022N 0041008W",
+        "routes": "A/UA411",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.3125,
+          35.546389
+        ]
+      },
+      "properties": {
+        "name": "SUBAL",
+        "raw_coordinates": "353247N 0121845W",
+        "routes": "FIR GMMM/LPPC",
+        "fra_relevance": "FRA(EX)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.248333,
+          30.915833
+        ]
+      },
+      "properties": {
+        "name": "SULAM",
+        "raw_coordinates": "305457N 0131454W",
+        "routes": "UN858",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.156667,
+          34.619722
+        ]
+      },
+      "properties": {
+        "name": "SUNID",
+        "raw_coordinates": "343711N 0100924W",
+        "routes": "UN858",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.266586,
+          33.745247
+        ]
+      },
+      "properties": {
+        "name": "TABIM",
+        "raw_coordinates": "334442.89N 0051559.71W",
+        "routes": "TMA/1 GMFF",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.861944,
+          30.271944
+        ]
+      },
+      "properties": {
+        "name": "TAGOG",
+        "raw_coordinates": "301619N 0095143W",
+        "routes": "TMA/1 GMAD – UG664",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -15.965344,
+          23.947122
+        ]
+      },
+      "properties": {
+        "name": "TAKAG",
+        "raw_coordinates": "235649.64N 0155755.24W",
+        "routes": "IAF RNAV (GNSS) RWY 21 AD GMMH",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.372011,
+          35.966667
+        ]
+      },
+      "properties": {
+        "name": "TAKAV",
+        "raw_coordinates": "355800N 0092219.24W",
+        "routes": "FIR GMMM/LPPC",
+        "fra_relevance": "FRA(EX)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.687067,
+          30.830511
+        ]
+      },
+      "properties": {
+        "name": "TALOK",
+        "raw_coordinates": "304949.84N 006 4113.44W",
+        "routes": "Point TMA GMMZ",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.738333,
+          30.039167
+        ]
+      },
+      "properties": {
+        "name": "TEKNA",
+        "raw_coordinates": "300221N 0094418W",
+        "routes": "TMA/1 GMAD – A600",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.717222,
+          30.104167
+        ]
+      },
+      "properties": {
+        "name": "TERTO",
+        "raw_coordinates": "300615N 0124302W",
+        "routes": "FIR GMMM/GCCC – A857 – UN857",
+        "fra_relevance": "FRA(X)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.229978,
+          31.994733
+        ]
+      },
+      "properties": {
+        "name": "TIDLO",
+        "raw_coordinates": "315941.04N 0061347.92W",
+        "routes": "FIR GMMM",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.540847,
+          30.908711
+        ]
+      },
+      "properties": {
+        "name": "TIDMO",
+        "raw_coordinates": "305431.36N 0063227.05W",
+        "routes": "IAF STAR RNAV RWY 30 AD GMMZ",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.935556,
+          35.966667
+        ]
+      },
+      "properties": {
+        "name": "TIGGI",
+        "raw_coordinates": "355800N 0105608W",
+        "routes": "FIR GMMM/LPPC",
+        "fra_relevance": "FRA(X)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.344603,
+          29.905639
+        ]
+      },
+      "properties": {
+        "name": "TIKVO",
+        "raw_coordinates": "295420.30N 0092040.57W",
+        "routes": "Point TMA GMAD",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.2656,
+          32.258981
+        ]
+      },
+      "properties": {
+        "name": "TIXAL",
+        "raw_coordinates": "321532.33N 0071556.16W",
+        "routes": "UG850 – W/UW900",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.831667,
+          32.6475
+        ]
+      },
+      "properties": {
+        "name": "TOBZA",
+        "raw_coordinates": "323851N 0054954W",
+        "routes": "H/UH119 – V/UV203",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.626569,
+          31.612131
+        ]
+      },
+      "properties": {
+        "name": "TODBA",
+        "raw_coordinates": "313643.67N 0093735.65W",
+        "routes": "IAF (VORz) RWY 16 AD GMMI",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.676944,
+          31.308333
+        ]
+      },
+      "properties": {
+        "name": "TOGMA",
+        "raw_coordinates": "311830N 0064037W",
+        "routes": "TMA GMMZ – V/UV203",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.015,
+          34.600556
+        ]
+      },
+      "properties": {
+        "name": "TOLSI",
+        "raw_coordinates": "343602N 0070054W",
+        "routes": "G/UG5- TMA GMMN",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.381667,
+          30.580833
+        ]
+      },
+      "properties": {
+        "name": "TOPMA",
+        "raw_coordinates": "303451N 0082254W",
+        "routes": "G/UG664 – M/UM372",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.2775,
+          31.753889
+        ]
+      },
+      "properties": {
+        "name": "TOVRA",
+        "raw_coordinates": "314514N 0111639W",
+        "routes": "A857 – UN857",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.331667,
+          34.497222
+        ]
+      },
+      "properties": {
+        "name": "TUSOR",
+        "raw_coordinates": "342950N 0061954W",
+        "routes": "TMA GMMN",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.678717,
+          31.653606
+        ]
+      },
+      "properties": {
+        "name": "UBITA",
+        "raw_coordinates": "313912.98N 0094043.38W",
+        "routes": "IAF RNAV (GNSS) RWY 16 AD GMMI",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.978611,
+          34.0
+        ]
+      },
+      "properties": {
+        "name": "ULMAM",
+        "raw_coordinates": "340000N 0015843W",
+        "routes": "FIR GMMM",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.543281,
+          33.5445
+        ]
+      },
+      "properties": {
+        "name": "UROLU",
+        "raw_coordinates": "333240.20N 0053235.81W",
+        "routes": "TMA/2 GMFF",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.072425,
+          35.428781
+        ]
+      },
+      "properties": {
+        "name": "UVMOL",
+        "raw_coordinates": "352543.61N 0040420.73W",
+        "routes": "IAF RNAV (GNSS) RWY 17 AD AL GMTA",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.504631,
+          32.869378
+        ]
+      },
+      "properties": {
+        "name": "VABNA",
+        "raw_coordinates": "325209.76N 0073016.67W",
+        "routes": "Z/UZ801",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.487131,
+          31.379158
+        ]
+      },
+      "properties": {
+        "name": "VABOL",
+        "raw_coordinates": "312244.97N 0082913.67W",
+        "routes": "STAR RNAV (GNSS) RWY10 AD GMMX",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6,
+          34.903056
+        ]
+      },
+      "properties": {
+        "name": "VABSI",
+        "raw_coordinates": "345411.00N 0023600.00W",
+        "routes": "TMA GMFO – N/UN726",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.3,
+          35.74
+        ]
+      },
+      "properties": {
+        "name": "VAGNO",
+        "raw_coordinates": "354424N 0061800W",
+        "routes": "TMA/1 GMTT – G/UG5",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.499369,
+          32.080564
+        ]
+      },
+      "properties": {
+        "name": "VALBA",
+        "raw_coordinates": "320450.03N 0072957.73W",
+        "routes": "G/UG850 - Z/UZ801",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.75,
+          31.833333
+        ]
+      },
+      "properties": {
+        "name": "VANOP",
+        "raw_coordinates": "315000N 0034500W",
+        "routes": "FIR GMMM",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.348333,
+          34.025556
+        ]
+      },
+      "properties": {
+        "name": "VARAS",
+        "raw_coordinates": "340132N 0062054W",
+        "routes": "TMA GMMN – A/UA411",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.572778,
+          30.509444
+        ]
+      },
+      "properties": {
+        "name": "VASTO",
+        "raw_coordinates": "303034N 0133422W",
+        "routes": "FIR GMMM/GCCC – UN858",
+        "fra_relevance": "FRA(E)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.265694,
+          33.891628
+        ]
+      },
+      "properties": {
+        "name": "VAXAM",
+        "raw_coordinates": "335329.86N 0051556.50W",
+        "routes": "TMA/1 GMFF",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.373333,
+          30.505833
+        ]
+      },
+      "properties": {
+        "name": "VEDOD",
+        "raw_coordinates": "303021N 0122224W",
+        "routes": "A857 – UN857",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.412778,
+          32.760278
+        ]
+      },
+      "properties": {
+        "name": "VONCI",
+        "raw_coordinates": "324537N 0082446W",
+        "routes": "TMA GMMN – G/UG5",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.7525,
+          34.56
+        ]
+      },
+      "properties": {
+        "name": "XAVOV",
+        "raw_coordinates": "343336N 0024509W",
+        "routes": "A/UA411 – L/UL58 – UM999",
+        "fra_relevance": "",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.986667,
+          33.123056
+        ]
+      },
+      "properties": {
+        "name": "XELER",
+        "raw_coordinates": "330723N 0105912W",
+        "routes": "FIR GMMM",
+        "fra_relevance": "FRA(I)",
+        "flight_type": "IFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.512222,
+          30.389167
+        ]
+      },
+      "properties": {
+        "name": "ABISA",
+        "raw_coordinates": "30°23’21’’N 009°30’44’’W",
+        "routes": "",
+        "fra_relevance": "",
+        "flight_type": "VFR",
+        "location": "AZIBA",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.212222,
+          30.386389
+        ]
+      },
+      "properties": {
+        "name": "ADOLA",
+        "raw_coordinates": "30°23’11’’N 009°12’44’’W",
+        "routes": "",
+        "fra_relevance": "",
+        "flight_type": "VFR",
+        "location": "OULED TAÏMA",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.455,
+          34.2
+        ]
+      },
+      "properties": {
+        "name": "ANIBI",
+        "raw_coordinates": "34°12’00’’N 006°27’18’’W",
+        "routes": "",
+        "fra_relevance": "",
+        "flight_type": "VFR",
+        "location": "",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.894167,
+          33.5725
+        ]
+      },
+      "properties": {
+        "name": "BAKRA",
+        "raw_coordinates": "33°34’21’’N 006°53’39’’W",
+        "routes": "",
+        "fra_relevance": "",
+        "flight_type": "VFR",
+        "location": "SIDI BATTACHE",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.641389,
+          30.189167
+        ]
+      },
+      "properties": {
+        "name": "BALAM",
+        "raw_coordinates": "30°11’21’’N 009°38’29’’W",
+        "routes": "",
+        "fra_relevance": "",
+        "flight_type": "VFR",
+        "location": "TIFNIT",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.515,
+          33.230833
+        ]
+      },
+      "properties": {
+        "name": "BASMA",
+        "raw_coordinates": "33°13’51’’N 008°30’54’’W",
+        "routes": "",
+        "fra_relevance": "",
+        "flight_type": "VFR",
+        "location": "EL JADIDA",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.315,
+          34.522222
+        ]
+      },
+      "properties": {
+        "name": "IBDIR",
+        "raw_coordinates": "34°31’20’’N 006°18’54W",
+        "routes": "",
+        "fra_relevance": "",
+        "flight_type": "VFR",
+        "location": "SIDI ALLAL TAZI",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.89,
+          30.6475
+        ]
+      },
+      "properties": {
+        "name": "KOPIR",
+        "raw_coordinates": "30°38’51’’N 009°53’24’’W",
+        "routes": "",
+        "fra_relevance": "",
+        "flight_type": "VFR",
+        "location": "CAP GHIR",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.331667,
+          33.4975
+        ]
+      },
+      "properties": {
+        "name": "KOSAD",
+        "raw_coordinates": "33°29’51’’N 007°19’54’’W",
+        "routes": "",
+        "fra_relevance": "",
+        "flight_type": "VFR",
+        "location": "BARRAGE OULED EL MALEH",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.015,
+          30.414167
+        ]
+      },
+      "properties": {
+        "name": "LABOK",
+        "raw_coordinates": "30°24’51’’N 009°00’54’’W",
+        "routes": "",
+        "fra_relevance": "",
+        "flight_type": "VFR",
+        "location": "KANAFIT",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.248333,
+          33.069722
+        ]
+      },
+      "properties": {
+        "name": "LEMDI",
+        "raw_coordinates": "33°04’11’’N 007°14’54’’W",
+        "routes": "",
+        "fra_relevance": "",
+        "flight_type": "VFR",
+        "location": "BEN AHMED",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.593889,
+          32.468889
+        ]
+      },
+      "properties": {
+        "name": "NEKTI",
+        "raw_coordinates": "32°28’08’’N 007°35’38’’W",
+        "routes": "",
+        "fra_relevance": "",
+        "flight_type": "VFR",
+        "location": "BARRAGE EL MASSIRA",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.665,
+          30.080833
+        ]
+      },
+      "properties": {
+        "name": "RILAT",
+        "raw_coordinates": "30°04’51’’N 009°39’54’’W",
+        "routes": "",
+        "fra_relevance": "",
+        "flight_type": "VFR",
+        "location": "R’BAT",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.54,
+          30.180833
+        ]
+      },
+      "properties": {
+        "name": "VASIR",
+        "raw_coordinates": "30°10’51’’N 009°32’24’’W",
+        "routes": "",
+        "fra_relevance": "",
+        "flight_type": "VFR",
+        "location": "INCHADEN",
+        "has_conflict": false,
+        "conflict_details": ""
+      }
+    }
+  ]
+}
