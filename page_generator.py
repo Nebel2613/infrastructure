@@ -179,7 +179,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morocco AIP ENR 4.4 — Significant Points</title>
+    <title>Infrastructure</title>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1248,7 +1248,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 
 def create_map(geojson_data, output_path="waypoints_map.html",
                borders_data=None, sectors_data=None,
-               title="Morocco AIP ENR 4.4", subtitle="Significant Points"):
+               title="Infrastructure", subtitle="FIR"):
     """Create a standalone HTML map file from waypoint + borders + sectors GeoJSON."""
     features = geojson_data.get("features", [])
     bbox = waypoint_bbox(features)
