@@ -16,9 +16,7 @@
         "routes": "TMA/2 GMAD – G/UG664",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -36,9 +34,7 @@
         "routes": "H/UH400 – M/UM372 – Z/UZ801",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -56,9 +52,7 @@
         "routes": "IAF RNAV (GNSS) RWY 17 AD GMTA",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -76,9 +70,7 @@
         "routes": "TMA/1 GMTT –N/UN726",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -96,9 +88,7 @@
         "routes": "Point à l’intérieur de la TMA GMFO",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -116,9 +106,7 @@
         "routes": "Jonction avec UN871 DEP GMMX",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -136,9 +124,7 @@
         "routes": "A857 – R/UR722 – UN857",
         "fra_relevance": "FRA(I)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -156,9 +142,7 @@
         "routes": "UN873",
         "fra_relevance": "FRA(I)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -176,9 +160,7 @@
         "routes": "FIR LPPC/GMMM",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -196,9 +178,7 @@
         "routes": "Point de sortie FIR GMMM/LECM",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -216,9 +196,7 @@
         "routes": "Point à l’intérieur de la TMA GMFO",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -236,9 +214,7 @@
         "routes": "FIR GMMM/LECM – UN871",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -256,9 +232,7 @@
         "routes": "TMA/1 GMAD – R724",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -272,13 +246,11 @@
       },
       "properties": {
         "name": "AGAMU",
-        "raw_coordinates": "301852,66N 0090541,11W",
+        "raw_coordinates": "301852.66N 0090541.11W",
         "routes": "Point TMA GMAD",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -296,9 +268,7 @@
         "routes": "TMA GMMN – G/UG5",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -316,9 +286,7 @@
         "routes": "H/UH400 – M/UM372 – L/UL102 – W/UW900",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -336,9 +304,7 @@
         "routes": "FIR GMMM/LPPC – UN858",
         "fra_relevance": "FRA(X)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -356,9 +322,7 @@
         "routes": "TMA/1 GMFF",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -376,9 +340,7 @@
         "routes": "TMA/1 GMFF",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -396,9 +358,7 @@
         "routes": "TMA/2 GMAD – A600",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -416,9 +376,7 @@
         "routes": "FIR GMMM/LPPC – R/UR722",
         "fra_relevance": "FRA(EX)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -436,9 +394,7 @@
         "routes": "Point de cheminement à l’intérieur TMA/1 GMAD",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -453,12 +409,10 @@
       "properties": {
         "name": "ARIAM",
         "raw_coordinates": "335322N 0013737W",
-        "routes": "Point d’entrée/sortie FIR GMMM/DAAA – L/UL102 –\nUT900 – UM999",
+        "routes": "Point d’entrée/sortie FIR GMMM/DAAA – L/UL102 – UT900 – UM999",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -476,9 +430,7 @@
         "routes": "TMA/1 GMAD – R975",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -496,9 +448,7 @@
         "routes": "Point de sortie FIR NAT",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -516,9 +466,7 @@
         "routes": "TMA/2 GMFF- M/UM240",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -536,9 +484,7 @@
         "routes": "TMA/2 GMAD – G849",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -556,9 +502,7 @@
         "routes": "Point d’entrée/sortie FIR GMMM/DAAA – UJ744",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -576,9 +520,7 @@
         "routes": "Jonction avec UN871 DEP GMMN/GMME",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -596,9 +538,7 @@
         "routes": "FIR GMMM/LPPC – N/UN726",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -616,9 +556,7 @@
         "routes": "G/UG5",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -633,12 +571,10 @@
       "properties": {
         "name": "BARIS",
         "raw_coordinates": "345411N 0055550W",
-        "routes": "Intersection voies aériennes B/UB11–H/UH104-\nN/UN10",
+        "routes": "Intersection voies aériennes B/UB11–H/UH104- N/UN10",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -656,9 +592,7 @@
         "routes": "FIR GMMM/LPPC – UN873",
         "fra_relevance": "FRA(EX)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -676,9 +610,7 @@
         "routes": "FIR GMMM/LECM –UM985",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -696,9 +628,7 @@
         "routes": "TMA GMMX– R/UR975",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -716,9 +646,7 @@
         "routes": "UN 873",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -736,9 +664,7 @@
         "routes": "FIR GMMM/LECM – G/UG850",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -756,9 +682,7 @@
         "routes": "FIR GMMM/LPPC – UN866",
         "fra_relevance": "FRA(EX)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -776,9 +700,7 @@
         "routes": "TMA/2 GMAD – G/UG850",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -796,9 +718,7 @@
         "routes": "Point à l’intérieur de la TMA GMMN",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -816,9 +736,7 @@
         "routes": "R975 – TMA GMMN",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -836,9 +754,7 @@
         "routes": "TMA GMMN",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -856,9 +772,7 @@
         "routes": "TMA/2 GMFF – G/UG850",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -876,9 +790,7 @@
         "routes": "FIRs GMMM/GCCC/GOOO – UR977 – UM372",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -896,9 +808,7 @@
         "routes": "G/UG850",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -916,9 +826,7 @@
         "routes": "TMA/1 GMFF – A411",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -936,9 +844,7 @@
         "routes": "TMA/2 GMAD – R724",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -952,13 +858,11 @@
       },
       "properties": {
         "name": "DESUM",
-        "raw_coordinates": "302323,82N 0131906,78W",
+        "raw_coordinates": "302323.82N 0131906.78W",
         "routes": "FIR GMMM/GCCC",
         "fra_relevance": "FRA(E)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -976,9 +880,7 @@
         "routes": "TMA/1 GMFF",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -996,9 +898,7 @@
         "routes": "FIR GMMM/GCCC – G/UG850",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1016,9 +916,7 @@
         "routes": "Point à l’intérieur de la TMA GMMN",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1036,9 +934,7 @@
         "routes": "IAF RNAV (GNSS) RWY 02 AD GMML",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1056,9 +952,7 @@
         "routes": "TMA/2 GMAD – R975",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1072,13 +966,11 @@
       },
       "properties": {
         "name": "DIDOV",
-        "raw_coordinates": "324430,11N 0060133,31W",
+        "raw_coordinates": "324430.11N 0060133.31W",
         "routes": "H/UH119 – M/UM372",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1096,9 +988,7 @@
         "routes": "TMA GMFO – W/UW700",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1116,9 +1006,7 @@
         "routes": "UN858",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1136,9 +1024,7 @@
         "routes": "B/UB11- TMA GMMN",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1156,9 +1042,7 @@
         "routes": "TMA GMMH – A600F",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1176,9 +1060,7 @@
         "routes": "UM372",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1196,9 +1078,7 @@
         "routes": "TMA/2 GMAD - UG664",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1216,9 +1096,7 @@
         "routes": "Point de transfert secteur WN/S",
         "fra_relevance": "FRA(EX)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1236,9 +1114,7 @@
         "routes": "Point à l’intérieur TMA GMMN–R/UR975",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1256,9 +1132,7 @@
         "routes": "A/UA411",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1276,9 +1150,7 @@
         "routes": "FIR GMMM/GCCC/GOOO – R/UR975-Z/UZ966-Z/UZ967",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1296,9 +1168,7 @@
         "routes": "TMA/1 GMAD",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1316,9 +1186,7 @@
         "routes": "TMA2 GMFF – A411",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1336,9 +1204,7 @@
         "routes": "IAF STARy CONV RWY21 AD GMME",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1356,9 +1222,7 @@
         "routes": "H/UH119 – UG850",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1376,9 +1240,7 @@
         "routes": "A857 – UN857",
         "fra_relevance": "FRA(I)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1396,9 +1258,7 @@
         "routes": "Point à l’intérieur TMA GMMN",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1416,9 +1276,7 @@
         "routes": "M/UM372",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1436,9 +1294,7 @@
         "routes": "IAF RNAV (GNSS) RWY 02 AD GMML",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1456,9 +1312,7 @@
         "routes": "Point à l’intérieur TMA GMMN",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1476,9 +1330,7 @@
         "routes": "TMA GMFO – G/UG664",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1496,9 +1348,7 @@
         "routes": "TMA GMMN – B/UB11",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1516,9 +1366,7 @@
         "routes": "IAF STARy CONV RWY21 AD GMME",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1536,9 +1384,7 @@
         "routes": "TMA GMMN – R/UR722",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1556,9 +1402,7 @@
         "routes": "FIR GMMM/LECM – B/UB11 – UN869",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1576,9 +1420,7 @@
         "routes": "TMA/1 GMFF",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1596,9 +1438,7 @@
         "routes": "TMA GMML – A600F",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1616,9 +1456,7 @@
         "routes": "TMA GMMH",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1636,9 +1474,7 @@
         "routes": "Point à l’intérieur TMA GMMN",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1656,9 +1492,7 @@
         "routes": "H/UH400",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1676,9 +1510,7 @@
         "routes": "TMA/1 GMAD – G849",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1696,9 +1528,7 @@
         "routes": "Point à l’intérieur TMA GMMN– H/UH119",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1716,9 +1546,7 @@
         "routes": "A857 – UN857 – H/UH899 – R/UR724",
         "fra_relevance": "FRA(I)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1736,9 +1564,7 @@
         "routes": "TMA/2 GMFF – W/UW255",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1756,9 +1582,7 @@
         "routes": "UN858",
         "fra_relevance": "FRA(I)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1776,9 +1600,7 @@
         "routes": "IAF RNAV (GNSS) RWY 17 AD GMTA",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1796,9 +1618,7 @@
         "routes": "TMA/2 GMFF – A411",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1816,9 +1636,7 @@
         "routes": "TMA/1 GMFF",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1836,9 +1654,7 @@
         "routes": "M/UM372 – W/UW700",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1856,9 +1672,7 @@
         "routes": "TMA GMFO (IAF BRG 238,45° / D9.0 NM/DME/OJD)",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1876,9 +1690,7 @@
         "routes": "H/UH104 – M/UM240",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1896,9 +1708,7 @@
         "routes": "TMA/1 GMAD –G/UG664",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1916,9 +1726,7 @@
         "routes": "TMA/1 GMFF",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1936,9 +1744,7 @@
         "routes": "TMA/2 GMAD – H/UH300",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1956,9 +1762,7 @@
         "routes": "FIR GMMM/GCCC – UN866",
         "fra_relevance": "FRA(EX)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1976,9 +1780,7 @@
         "routes": "IAF RNAV (GNSS) RWY 16 AD GMMI",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -1996,9 +1798,7 @@
         "routes": "FIR GMMM/GCCC – G/UG5 – UN871",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2016,9 +1816,7 @@
         "routes": "FIR GMMM/LECM – GUG 5",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2036,9 +1834,7 @@
         "routes": "FIR GMMM/LECM – A857 – UN857",
         "fra_relevance": "FRA(E)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2056,9 +1852,7 @@
         "routes": "Point à l’intérieur TMA GMMN",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2076,9 +1870,7 @@
         "routes": "UN866",
         "fra_relevance": "FRA(I)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2096,9 +1888,7 @@
         "routes": "H/UH400 – M/UM372",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2116,9 +1906,7 @@
         "routes": "UR977",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2136,9 +1924,7 @@
         "routes": "TMA GMMN – H/UH119",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2156,9 +1942,7 @@
         "routes": "TMA GMMN – R/UR722",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2176,9 +1960,7 @@
         "routes": "TMA/1 GMTT – M143",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2196,9 +1978,7 @@
         "routes": "TMA GMMX",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2216,9 +1996,7 @@
         "routes": "H/UH899",
         "fra_relevance": "FRA(EX)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2236,9 +2014,7 @@
         "routes": "TMA GMMZ – G/UG664",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2256,9 +2032,7 @@
         "routes": "IAF RNAV (GNSS) RWY 03 AD GMMH",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2276,9 +2050,7 @@
         "routes": "TMA GMMH – A600F – B600G",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2296,9 +2068,7 @@
         "routes": "TMA/2 GMFF –M/UM240",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2316,9 +2086,7 @@
         "routes": "Point de sortie FIR NAT",
         "fra_relevance": "FRA(EX)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2336,9 +2104,7 @@
         "routes": "FIR GMMM/LECM – N/UN10",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2356,9 +2122,7 @@
         "routes": "TMA GMMZ – G/UG664",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2376,9 +2140,7 @@
         "routes": "TMA GMMX – G/UG850",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2396,9 +2158,7 @@
         "routes": "Z801",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2412,13 +2172,11 @@
       },
       "properties": {
         "name": "MABAP",
-        "raw_coordinates": "320727,36N 0081149,62W",
+        "raw_coordinates": "320727.36N 0081149.62W",
         "routes": "TMA GMMX – B/UB11 – R/UR722 – UN869",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2436,9 +2194,7 @@
         "routes": "TMA GMMN – Z/UZ801",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2456,9 +2212,7 @@
         "routes": "TMA/1 GMTT – M/UM240",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2476,9 +2230,7 @@
         "routes": "TMA GMMX – B11",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2496,9 +2248,7 @@
         "routes": "TMA/1 GMFF",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2516,9 +2266,7 @@
         "routes": "R/UR722",
         "fra_relevance": "FRA(EX)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2536,9 +2284,7 @@
         "routes": "TMA GMMZ – J744",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2556,9 +2302,7 @@
         "routes": "TMA/2 GMAD – H4/UH00",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2576,9 +2320,7 @@
         "routes": "UN873",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2596,9 +2338,7 @@
         "routes": "TMA/1 GMAD – H/UH300 – H/UH400",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2616,9 +2356,7 @@
         "routes": "Point à l’intérieur TMA GMMN",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2636,9 +2374,7 @@
         "routes": "TMA GMMX – J744",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2656,9 +2392,7 @@
         "routes": "Point de transfert secteurs S/W – R/UR724",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2676,9 +2410,7 @@
         "routes": "W/UW900",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2696,9 +2428,7 @@
         "routes": "TMA GMMZ–W/UW900",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2716,9 +2446,7 @@
         "routes": "Point à l’intérieur TMA GMMN",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2736,9 +2464,7 @@
         "routes": "UR975",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2756,9 +2482,7 @@
         "routes": "TMA/2 GMAD – R/U975",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2776,9 +2500,7 @@
         "routes": "STAR RNAV(GNSS) RWY10 GMMX",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2796,9 +2518,7 @@
         "routes": "Point à l’intérieur TMA GMMN",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2816,9 +2536,7 @@
         "routes": "TMA/1 GMTT – N/UN726",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2833,12 +2551,10 @@
       "properties": {
         "name": "NASRO",
         "raw_coordinates": "335815N 0074306W",
-        "routes": "Point à l’intérieur TMA GMMN(Point d’attente STAR\nGMMN)",
+        "routes": "Point à l’intérieur TMA GMMN(Point d’attente STAR GMMN)",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2856,9 +2572,7 @@
         "routes": "Point à l’intérieur de la TMA GMFO",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2876,9 +2590,7 @@
         "routes": "UG850",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2896,9 +2608,7 @@
         "routes": "FIR GMMM",
         "fra_relevance": "FRA(I)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2916,9 +2626,7 @@
         "routes": "FIR GMMM",
         "fra_relevance": "FRA(I)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2936,9 +2644,7 @@
         "routes": "TMA GMMN – R/UR975",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2956,9 +2662,7 @@
         "routes": "Point de sortie FIR NAT",
         "fra_relevance": "FRA(EX)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2976,9 +2680,7 @@
         "routes": "UN871",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -2996,9 +2698,7 @@
         "routes": "H/UH500 – R/UR724",
         "fra_relevance": "FRA(EX)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3016,9 +2716,7 @@
         "routes": "G/UG5",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3036,9 +2734,7 @@
         "routes": "TMA/1 GMTT",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3056,9 +2752,7 @@
         "routes": "TMA/2 GMFF – V203",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3076,9 +2770,7 @@
         "routes": "TMA GMMX – G/UG850",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3096,9 +2788,7 @@
         "routes": "TMA GMMX",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3116,9 +2806,7 @@
         "routes": "H/UH899",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3136,9 +2824,7 @@
         "routes": "IAF RNAV (GNSS) RWY 24 AD GMTN",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3156,9 +2842,7 @@
         "routes": "Point de sortie FIR NAT",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3176,9 +2860,7 @@
         "routes": "G/UG664 – W/UW255",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3196,9 +2878,7 @@
         "routes": "TMA/1 GMAD – G/UG850",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3216,9 +2896,7 @@
         "routes": "FIR GMMM / DAAA",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3236,9 +2914,7 @@
         "routes": "UM985 – UN871",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3256,9 +2932,7 @@
         "routes": "UN 866",
         "fra_relevance": "FRA(I)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3276,9 +2950,7 @@
         "routes": "FIR GMMM / LPPC – R/UR724",
         "fra_relevance": "FRA(EX)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3296,9 +2968,7 @@
         "routes": "Point d’entrée/sortie FIR GMMM/LECM",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3316,9 +2986,7 @@
         "routes": "B/UB11– UN869",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3336,9 +3004,7 @@
         "routes": "H/UH119",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3356,9 +3022,7 @@
         "routes": "W/UW900",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3376,9 +3040,7 @@
         "routes": "TMA/2 GMFF – R975",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3396,9 +3058,7 @@
         "routes": "BDRY FIR/UIR GMMM/LECM",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3416,9 +3076,7 @@
         "routes": "IAF RNAV (GNSS) RWY 16 AD GMMI",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3436,9 +3094,7 @@
         "routes": "IAF BRG 272° TNR DVOR/DME AD GMTT",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3456,9 +3112,7 @@
         "routes": "IAF RNAV (GNSS) RWY 23 AD GMMD",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3476,9 +3130,7 @@
         "routes": "G/UG5",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3496,9 +3148,7 @@
         "routes": "IAF RNAV (GNSS) RWY 28 AD GMMX",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3516,9 +3166,7 @@
         "routes": "TMA/2 GMFF",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3536,9 +3184,7 @@
         "routes": "TMA/2 GMAD",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3556,9 +3202,7 @@
         "routes": "TMA GMMZ –Q401",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3576,9 +3220,7 @@
         "routes": "M372",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3596,9 +3238,7 @@
         "routes": "H/UH500 – TMA GMMN",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3616,9 +3256,7 @@
         "routes": "Point à l’intérieur TMA GMMN",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3636,9 +3274,7 @@
         "routes": "IAF BRG 098.56°MAG/15.0 DME MAK",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3656,9 +3292,7 @@
         "routes": "TMA/1 GMFF",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3676,9 +3310,7 @@
         "routes": "IAF RNAV (GNSS) RWY 02 AD GMML",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3696,9 +3328,7 @@
         "routes": "Point de transfert secteur WS/S",
         "fra_relevance": "FRA(EX)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3716,9 +3346,7 @@
         "routes": "TMA GMFO – A411",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3736,9 +3364,7 @@
         "routes": "UM985– G/UG5 – M143",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3756,9 +3382,7 @@
         "routes": "L/UL102 – Q/UQ401",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3776,9 +3400,7 @@
         "routes": "FIR GMMM/LECM – UL82",
         "fra_relevance": "FRA(E)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3796,9 +3418,7 @@
         "routes": "FIR GMMM/GCCC – G849 – UN869",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3816,9 +3436,7 @@
         "routes": "TMA GMMN – R/UR975",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3836,9 +3454,7 @@
         "routes": "Point à l’intérieur TMA GMMN",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3856,9 +3472,7 @@
         "routes": "FIR GMMM/GCCC – UN873",
         "fra_relevance": "FRA(EX)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3876,9 +3490,7 @@
         "routes": "UA411",
         "fra_relevance": "FRA(EX)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3896,9 +3508,7 @@
         "routes": "TMA GMML-Z/UZ967",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3916,9 +3526,7 @@
         "routes": "IAF STAR RNAV(GNSS) RWY10 AD GMMX",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3936,9 +3544,7 @@
         "routes": "IAF RNAV(GNSS) RWY08;RWY26 AD GMMW",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3956,9 +3562,7 @@
         "routes": "TMA/1 GMTT – N10",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3976,9 +3580,7 @@
         "routes": "TMA/2 GMFF – M372",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -3996,9 +3598,7 @@
         "routes": "FIR GMMM/GCCC – A/UA600",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4016,9 +3616,7 @@
         "routes": "TMA/2 GMAD – G/UG850",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4036,9 +3634,7 @@
         "routes": "UN871 – G/UG5 – UG664",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4056,9 +3652,7 @@
         "routes": "Point TMA GMAD",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4076,9 +3670,7 @@
         "routes": "A/UA411",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4096,9 +3688,7 @@
         "routes": "FIR GMMM/LPPC",
         "fra_relevance": "FRA(EX)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4116,9 +3706,7 @@
         "routes": "UN858",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4136,9 +3724,7 @@
         "routes": "UN858",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4156,9 +3742,7 @@
         "routes": "TMA/1 GMFF",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4176,9 +3760,7 @@
         "routes": "TMA/1 GMAD – UG664",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4196,9 +3778,7 @@
         "routes": "IAF RNAV (GNSS) RWY 21 AD GMMH",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4216,9 +3796,7 @@
         "routes": "FIR GMMM/LPPC",
         "fra_relevance": "FRA(EX)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4232,13 +3810,11 @@
       },
       "properties": {
         "name": "TALOK",
-        "raw_coordinates": "304949.84N 006 4113.44W",
+        "raw_coordinates": "304949.84N 0064113.44W",
         "routes": "Point TMA GMMZ",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4256,9 +3832,7 @@
         "routes": "TMA/1 GMAD – A600",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4276,9 +3850,7 @@
         "routes": "FIR GMMM/GCCC – A857 – UN857",
         "fra_relevance": "FRA(X)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4296,9 +3868,7 @@
         "routes": "FIR GMMM",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4316,9 +3886,7 @@
         "routes": "IAF STAR RNAV RWY 30 AD GMMZ",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4336,9 +3904,7 @@
         "routes": "FIR GMMM/LPPC",
         "fra_relevance": "FRA(X)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4356,9 +3922,7 @@
         "routes": "Point TMA GMAD",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4376,9 +3940,7 @@
         "routes": "UG850 – W/UW900",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4396,9 +3958,7 @@
         "routes": "H/UH119 – V/UV203",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4416,9 +3976,7 @@
         "routes": "IAF (VORz) RWY 16 AD GMMI",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4436,9 +3994,7 @@
         "routes": "TMA GMMZ – V/UV203",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4456,9 +4012,7 @@
         "routes": "G/UG5- TMA GMMN",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4476,9 +4030,7 @@
         "routes": "G/UG664 – M/UM372",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4496,9 +4048,7 @@
         "routes": "A857 – UN857",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4516,9 +4066,7 @@
         "routes": "TMA GMMN",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4536,9 +4084,7 @@
         "routes": "IAF RNAV (GNSS) RWY 16 AD GMMI",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4556,9 +4102,7 @@
         "routes": "FIR GMMM",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4576,9 +4120,7 @@
         "routes": "TMA/2 GMFF",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4596,9 +4138,7 @@
         "routes": "IAF RNAV (GNSS) RWY 17 AD AL GMTA",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4616,9 +4156,7 @@
         "routes": "Z/UZ801",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4636,9 +4174,7 @@
         "routes": "STAR RNAV (GNSS) RWY10 AD GMMX",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4656,9 +4192,7 @@
         "routes": "TMA GMFO – N/UN726",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4676,9 +4210,7 @@
         "routes": "TMA/1 GMTT – G/UG5",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4696,9 +4228,7 @@
         "routes": "G/UG850 - Z/UZ801",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4716,9 +4246,7 @@
         "routes": "FIR GMMM",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4736,9 +4264,7 @@
         "routes": "TMA GMMN – A/UA411",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4756,9 +4282,7 @@
         "routes": "FIR GMMM/GCCC – UN858",
         "fra_relevance": "FRA(E)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4776,9 +4300,7 @@
         "routes": "TMA/1 GMFF",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4796,9 +4318,7 @@
         "routes": "A857 – UN857",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4816,9 +4336,7 @@
         "routes": "TMA GMMN – G/UG5",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4836,9 +4354,7 @@
         "routes": "A/UA411 – L/UL58 – UM999",
         "fra_relevance": "",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4856,9 +4372,7 @@
         "routes": "FIR GMMM",
         "fra_relevance": "FRA(I)",
         "flight_type": "IFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4872,13 +4386,11 @@
       },
       "properties": {
         "name": "ABISA",
-        "raw_coordinates": "30°23’21’’N 009°30’44’’W",
+        "raw_coordinates": "302321N 0093044W",
         "routes": "",
         "fra_relevance": "",
         "flight_type": "VFR",
-        "location": "AZIBA",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": "AZIBA"
       }
     },
     {
@@ -4892,13 +4404,11 @@
       },
       "properties": {
         "name": "ADOLA",
-        "raw_coordinates": "30°23’11’’N 009°12’44’’W",
+        "raw_coordinates": "302311N 0091244W",
         "routes": "",
         "fra_relevance": "",
         "flight_type": "VFR",
-        "location": "OULED TAÏMA",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": "OULED TAÏMA"
       }
     },
     {
@@ -4912,13 +4422,11 @@
       },
       "properties": {
         "name": "ANIBI",
-        "raw_coordinates": "34°12’00’’N 006°27’18’’W",
+        "raw_coordinates": "341200N 0062718W",
         "routes": "",
         "fra_relevance": "",
         "flight_type": "VFR",
-        "location": "",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": ""
       }
     },
     {
@@ -4932,13 +4440,11 @@
       },
       "properties": {
         "name": "BAKRA",
-        "raw_coordinates": "33°34’21’’N 006°53’39’’W",
+        "raw_coordinates": "333421N 0065339W",
         "routes": "",
         "fra_relevance": "",
         "flight_type": "VFR",
-        "location": "SIDI BATTACHE",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": "SIDI BATTACHE"
       }
     },
     {
@@ -4952,13 +4458,11 @@
       },
       "properties": {
         "name": "BALAM",
-        "raw_coordinates": "30°11’21’’N 009°38’29’’W",
+        "raw_coordinates": "301121N 0093829W",
         "routes": "",
         "fra_relevance": "",
         "flight_type": "VFR",
-        "location": "TIFNIT",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": "TIFNIT"
       }
     },
     {
@@ -4972,13 +4476,11 @@
       },
       "properties": {
         "name": "BASMA",
-        "raw_coordinates": "33°13’51’’N 008°30’54’’W",
+        "raw_coordinates": "331351N 0083054W",
         "routes": "",
         "fra_relevance": "",
         "flight_type": "VFR",
-        "location": "EL JADIDA",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": "EL JADIDA"
       }
     },
     {
@@ -4992,13 +4494,11 @@
       },
       "properties": {
         "name": "IBDIR",
-        "raw_coordinates": "34°31’20’’N 006°18’54W",
+        "raw_coordinates": "343120N 0061854W",
         "routes": "",
         "fra_relevance": "",
         "flight_type": "VFR",
-        "location": "SIDI ALLAL TAZI",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": "SIDI ALLAL TAZI"
       }
     },
     {
@@ -5012,13 +4512,11 @@
       },
       "properties": {
         "name": "KOPIR",
-        "raw_coordinates": "30°38’51’’N 009°53’24’’W",
+        "raw_coordinates": "303851N 0095324W",
         "routes": "",
         "fra_relevance": "",
         "flight_type": "VFR",
-        "location": "CAP GHIR",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": "CAP GHIR"
       }
     },
     {
@@ -5032,13 +4530,11 @@
       },
       "properties": {
         "name": "KOSAD",
-        "raw_coordinates": "33°29’51’’N 007°19’54’’W",
+        "raw_coordinates": "332951N 0071954W",
         "routes": "",
         "fra_relevance": "",
         "flight_type": "VFR",
-        "location": "BARRAGE OULED EL MALEH",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": "BARRAGE OULED EL MALEH"
       }
     },
     {
@@ -5052,13 +4548,11 @@
       },
       "properties": {
         "name": "LABOK",
-        "raw_coordinates": "30°24’51’’N 009°00’54’’W",
+        "raw_coordinates": "302451N 0090054W",
         "routes": "",
         "fra_relevance": "",
         "flight_type": "VFR",
-        "location": "KANAFIT",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": "KANAFIT"
       }
     },
     {
@@ -5072,13 +4566,11 @@
       },
       "properties": {
         "name": "LEMDI",
-        "raw_coordinates": "33°04’11’’N 007°14’54’’W",
+        "raw_coordinates": "330411N 0071454W",
         "routes": "",
         "fra_relevance": "",
         "flight_type": "VFR",
-        "location": "BEN AHMED",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": "BEN AHMED"
       }
     },
     {
@@ -5092,13 +4584,11 @@
       },
       "properties": {
         "name": "NEKTI",
-        "raw_coordinates": "32°28’08’’N 007°35’38’’W",
+        "raw_coordinates": "322808N 0073538W",
         "routes": "",
         "fra_relevance": "",
         "flight_type": "VFR",
-        "location": "BARRAGE EL MASSIRA",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": "BARRAGE EL MASSIRA"
       }
     },
     {
@@ -5112,13 +4602,11 @@
       },
       "properties": {
         "name": "RILAT",
-        "raw_coordinates": "30°04’51’’N 009°39’54’’W",
+        "raw_coordinates": "300451N 0093954W",
         "routes": "",
         "fra_relevance": "",
         "flight_type": "VFR",
-        "location": "R’BAT",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": "R’BAT"
       }
     },
     {
@@ -5132,13 +4620,11 @@
       },
       "properties": {
         "name": "VASIR",
-        "raw_coordinates": "30°10’51’’N 009°32’24’’W",
+        "raw_coordinates": "301051N 0093224W",
         "routes": "",
         "fra_relevance": "",
         "flight_type": "VFR",
-        "location": "INCHADEN",
-        "has_conflict": false,
-        "conflict_details": ""
+        "location": "INCHADEN"
       }
     }
   ]

@@ -1,0 +1,1087 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.383333,
+          30.321944
+        ]
+      },
+      "properties": {
+        "name": "AGADIR / AL MASSIRA",
+        "id": "ADM",
+        "type": "DVOR/DME",
+        "raw_coordinates": "301919N 0092300W",
+        "components": [
+          {
+            "id": "ADM",
+            "type": "DVOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.319444,
+          30.320278
+        ]
+      },
+      "properties": {
+        "name": "AGADIR / AL MASSIRA",
+        "id": "ALS",
+        "type": "NDB",
+        "raw_coordinates": "301913N 0091910W",
+        "components": [
+          {
+            "id": "ALS",
+            "type": "NDB"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.454722,
+          30.323611
+        ]
+      },
+      "properties": {
+        "name": "AGADIR / AL MASSIRA",
+        "id": "AML",
+        "type": "NDB",
+        "raw_coordinates": "301925N 0092717W",
+        "components": [
+          {
+            "id": "AML",
+            "type": "NDB"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.452222,
+          30.369167
+        ]
+      },
+      "properties": {
+        "name": "AGADIR / INEZGANE",
+        "id": "AZR",
+        "type": "NDB",
+        "raw_coordinates": "302209N 0092708W",
+        "components": [
+          {
+            "id": "AZR",
+            "type": "NDB"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.838056,
+          35.188056
+        ]
+      },
+      "properties": {
+        "name": "AL HOCEIMA / Chérif EL Idrissi",
+        "id": "ALM",
+        "type": "VOR/DME",
+        "raw_coordinates": "351117N 0035017W",
+        "components": [
+          {
+            "id": "ALM",
+            "type": "VOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.880833,
+          32.157778
+        ]
+      },
+      "properties": {
+        "name": "BENGUERIR",
+        "id": "BGR",
+        "type": "VOR/DME",
+        "raw_coordinates": "320928N 0075251W",
+        "components": [
+          {
+            "id": "BGR",
+            "type": "VOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.298022,
+          32.416875
+        ]
+      },
+      "properties": {
+        "name": "BÉN-MELLAL",
+        "id": "BML",
+        "type": "DVOR/DME",
+        "raw_coordinates": "322500.75N 0061752.88W",
+        "components": [
+          {
+            "id": "BML",
+            "type": "DVOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.208056,
+          33.641944
+        ]
+      },
+      "properties": {
+        "name": "BENSLIMANE",
+        "id": "BNS",
+        "type": "VOR/DME",
+        "raw_coordinates": "333831N 0071229W",
+        "components": [
+          {
+            "id": "BNS",
+            "type": "VOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.113611,
+          33.615833
+        ]
+      },
+      "properties": {
+        "name": "BENSLIMANE",
+        "id": "CAE",
+        "type": "Locator",
+        "raw_coordinates": "333657N 0070649W",
+        "components": [
+          {
+            "id": "CAE",
+            "type": "Locator"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.030556,
+          32.514167
+        ]
+      },
+      "properties": {
+        "name": "BOUARFA",
+        "id": "BRF",
+        "type": "VOR/DME",
+        "raw_coordinates": "323051N 0020150W",
+        "components": [
+          {
+            "id": "BRF",
+            "type": "VOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.923333,
+          35.783333
+        ]
+      },
+      "properties": {
+        "name": "CAP SPARTEL",
+        "id": "SP",
+        "type": "NDB (marin)",
+        "raw_coordinates": "354700N 0055524W",
+        "components": [
+          {
+            "id": "SP",
+            "type": "NDB (marin)"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.606033,
+          33.420506
+        ]
+      },
+      "properties": {
+        "name": "CASABLANCA / MOHAMMED V",
+        "id": "CBL",
+        "type": "DVOR/DME",
+        "raw_coordinates": "332513.82N 0073621.72W",
+        "components": [
+          {
+            "id": "CBL",
+            "type": "DVOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.506111,
+          33.115556
+        ]
+      },
+      "properties": {
+        "name": "CASABLANCA / MOHAMMED V",
+        "id": "SLK",
+        "type": "VOR/DME",
+        "raw_coordinates": "330656N 0073022W",
+        "components": [
+          {
+            "id": "SLK",
+            "type": "VOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.677222,
+          33.521389
+        ]
+      },
+      "properties": {
+        "name": "CASABLANCA / MOHAMMED V",
+        "id": "CBA/SAK",
+        "type": "DME + NDB",
+        "raw_coordinates": "333117N 0074038W",
+        "components": [
+          {
+            "id": "CBA",
+            "type": "DME"
+          },
+          {
+            "id": "SAK",
+            "type": "NDB"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.555278,
+          33.273333
+        ]
+      },
+      "properties": {
+        "name": "CASABLANCA / MOHAMMED V",
+        "id": "NSR",
+        "type": "NDB",
+        "raw_coordinates": "331624N 0073319W",
+        "components": [
+          {
+            "id": "NSR",
+            "type": "NDB"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.609167,
+          33.43
+        ]
+      },
+      "properties": {
+        "name": "CASABLANCA / MOHAMMED V",
+        "id": "NUA",
+        "type": "NDB",
+        "raw_coordinates": "332548N 0073633W",
+        "components": [
+          {
+            "id": "NUA",
+            "type": "NDB"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -15.919722,
+          23.744722
+        ]
+      },
+      "properties": {
+        "name": "DAKHLA",
+        "id": "DKH",
+        "type": "DVOR/DME",
+        "raw_coordinates": "234441N 0155511W",
+        "components": [
+          {
+            "id": "DKH",
+            "type": "DVOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.065,
+          32.933611
+        ]
+      },
+      "properties": {
+        "name": "DAOURAT",
+        "id": "CSD",
+        "type": "Locator",
+        "raw_coordinates": "325601N 0080354W",
+        "components": [
+          {
+            "id": "CSD",
+            "type": "Locator"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.665,
+          33.614167
+        ]
+      },
+      "properties": {
+        "name": "EL HANK",
+        "id": "HA",
+        "type": "NDB (marin)",
+        "raw_coordinates": "333651N 0073954W",
+        "components": [
+          {
+            "id": "HA",
+            "type": "NDB (marin)"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.686944,
+          31.401111
+        ]
+      },
+      "properties": {
+        "name": "ESSAOUIRA / Mogador",
+        "id": "ESS",
+        "type": "VOR/DME",
+        "raw_coordinates": "312404N 0094113W",
+        "components": [
+          {
+            "id": "ESS",
+            "type": "VOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.684558,
+          31.396622
+        ]
+      },
+      "properties": {
+        "name": "ESSAOUIRA / Mogador",
+        "id": "MGR",
+        "type": "DVOR/DME",
+        "raw_coordinates": "312347.84N 0094104.41W",
+        "components": [
+          {
+            "id": "MGR",
+            "type": "DVOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.360556,
+          31.924167
+        ]
+      },
+      "properties": {
+        "name": "ERRACHIDIA / Moulay Ali Chérif",
+        "id": "ERA",
+        "type": "VOR/DME",
+        "raw_coordinates": "315527N 0042138W",
+        "components": [
+          {
+            "id": "ERA",
+            "type": "VOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.362222,
+          31.925278
+        ]
+      },
+      "properties": {
+        "name": "ERRACHIDIA / Moulay Ali Chérif",
+        "id": "KSR",
+        "type": "Locator",
+        "raw_coordinates": "315531N 0042144W",
+        "components": [
+          {
+            "id": "KSR",
+            "type": "Locator"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.013611,
+          33.9275
+        ]
+      },
+      "properties": {
+        "name": "FES / SAISS",
+        "id": "FES",
+        "type": "VOR/DME",
+        "raw_coordinates": "335539N 0050049W",
+        "components": [
+          {
+            "id": "FES",
+            "type": "VOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.890833,
+          33.926944
+        ]
+      },
+      "properties": {
+        "name": "FES / SAISS",
+        "id": "FEZ",
+        "type": "Locator",
+        "raw_coordinates": "335537N 0045327W",
+        "components": [
+          {
+            "id": "FEZ",
+            "type": "Locator"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -10.069167,
+          29.010556
+        ]
+      },
+      "properties": {
+        "name": "GUELMIME",
+        "id": "GLM",
+        "type": "VOR/DME",
+        "raw_coordinates": "290038N 0100409W",
+        "components": [
+          {
+            "id": "GLM",
+            "type": "VOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.160556,
+          33.5
+        ]
+      },
+      "properties": {
+        "name": "IFRANE",
+        "id": "IFN",
+        "type": "NDB",
+        "raw_coordinates": "333000N 0050938W",
+        "components": [
+          {
+            "id": "IFN",
+            "type": "NDB"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.620556,
+          34.287222
+        ]
+      },
+      "properties": {
+        "name": "KENITRA",
+        "id": "CNL",
+        "type": "NDB",
+        "raw_coordinates": "341714N 0063714W",
+        "components": [
+          {
+            "id": "CNL",
+            "type": "NDB"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.218056,
+          27.142778
+        ]
+      },
+      "properties": {
+        "name": "LAAYOUNE / Hassan 1er",
+        "id": "LAY",
+        "type": "VOR/DME",
+        "raw_coordinates": "270834N 0131305W",
+        "components": [
+          {
+            "id": "LAY",
+            "type": "VOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.103056,
+          31.612778
+        ]
+      },
+      "properties": {
+        "name": "MARRAKECH / Ménara",
+        "id": "MAK",
+        "type": "DVOR/DME",
+        "raw_coordinates": "313646N 0080611W",
+        "components": [
+          {
+            "id": "MAK",
+            "type": "DVOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.515,
+          33.876944
+        ]
+      },
+      "properties": {
+        "name": "MEKNES",
+        "id": "MKS",
+        "type": "VOR",
+        "raw_coordinates": "335237N 0053054W",
+        "components": [
+          {
+            "id": "MKS",
+            "type": "VOR"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.029167,
+          34.986667
+        ]
+      },
+      "properties": {
+        "name": "NADOR / EL AROUI",
+        "id": "ARI",
+        "type": "DVOR/DME",
+        "raw_coordinates": "345912N 0030145W",
+        "components": [
+          {
+            "id": "ARI",
+            "type": "DVOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.904444,
+          30.94
+        ]
+      },
+      "properties": {
+        "name": "OUARZAZATE",
+        "id": "OZT",
+        "type": "DVOR/DME",
+        "raw_coordinates": "305624N 0065416W",
+        "components": [
+          {
+            "id": "OZT",
+            "type": "DVOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.8825,
+          30.927222
+        ]
+      },
+      "properties": {
+        "name": "OUARZAZATE",
+        "id": "ORZ",
+        "type": "Locator",
+        "raw_coordinates": "305538N 0065257W",
+        "components": [
+          {
+            "id": "ORZ",
+            "type": "Locator"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.950278,
+          34.773333
+        ]
+      },
+      "properties": {
+        "name": "OUJDA / Angads",
+        "id": "OJD",
+        "type": "VOR/DME",
+        "raw_coordinates": "344624N 0015701W",
+        "components": [
+          {
+            "id": "OJD",
+            "type": "VOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.960556,
+          34.815833
+        ]
+      },
+      "properties": {
+        "name": "OUJDA / Angads",
+        "id": "VDO",
+        "type": "VOR/DME",
+        "raw_coordinates": "344857N 0015738W",
+        "components": [
+          {
+            "id": "VDO",
+            "type": "VOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.565,
+          33.614167
+        ]
+      },
+      "properties": {
+        "name": "OUKACHA",
+        "id": "AK",
+        "type": "NDB (marin)",
+        "raw_coordinates": "333651N 0073354W",
+        "components": [
+          {
+            "id": "AK",
+            "type": "NDB (marin)"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.746389,
+          34.05
+        ]
+      },
+      "properties": {
+        "name": "RABAT / Salé",
+        "id": "RBT",
+        "type": "DVOR/DME",
+        "raw_coordinates": "340300N 0064447W",
+        "components": [
+          {
+            "id": "RBT",
+            "type": "DVOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.664167,
+          34.176389
+        ]
+      },
+      "properties": {
+        "name": "RABAT / Salé",
+        "id": "SBI",
+        "type": "Locator",
+        "raw_coordinates": "341035N 0063951W",
+        "components": [
+          {
+            "id": "SBI",
+            "type": "Locator"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.025833,
+          34.2375
+        ]
+      },
+      "properties": {
+        "name": "SIDI SLIMANE",
+        "id": "SMN",
+        "type": "VOR/DME",
+        "raw_coordinates": "341415N 0060133W",
+        "components": [
+          {
+            "id": "SMN",
+            "type": "VOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.686667,
+          26.730833
+        ]
+      },
+      "properties": {
+        "name": "ES-SEMARA",
+        "id": "SMR",
+        "type": "DVOR/DME",
+        "raw_coordinates": "264351N 0114112W",
+        "components": [
+          {
+            "id": "SMR",
+            "type": "DVOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.687778,
+          26.741944
+        ]
+      },
+      "properties": {
+        "name": "ES-SEMARA",
+        "id": "SMA",
+        "type": "Locator",
+        "raw_coordinates": "264431N 0114116W",
+        "components": [
+          {
+            "id": "SMA",
+            "type": "Locator"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.919167,
+          35.734167
+        ]
+      },
+      "properties": {
+        "name": "TANGER / Ibn Batouta",
+        "id": "TNR",
+        "type": "DVOR/DME",
+        "raw_coordinates": "354403N 0055509W",
+        "components": [
+          {
+            "id": "TNR",
+            "type": "DVOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.804722,
+          35.721111
+        ]
+      },
+      "properties": {
+        "name": "TANGER / Ibn Batouta",
+        "id": "TAN",
+        "type": "Locator",
+        "raw_coordinates": "354316N 0054817W",
+        "components": [
+          {
+            "id": "TAN",
+            "type": "Locator"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.173056,
+          28.428333
+        ]
+      },
+      "properties": {
+        "name": "TAN-TAN / Plage Blanche",
+        "id": "TNN",
+        "type": "DVOR/DME",
+        "raw_coordinates": "282542N 0111023W",
+        "components": [
+          {
+            "id": "TNN",
+            "type": "DVOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.171389,
+          28.431111
+        ]
+      },
+      "properties": {
+        "name": "TAN-TAN / Plage Blanche",
+        "id": "TNA",
+        "type": "NDB",
+        "raw_coordinates": "282552N 0111017W",
+        "components": [
+          {
+            "id": "TNA",
+            "type": "NDB"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.318889,
+          35.5975
+        ]
+      },
+      "properties": {
+        "name": "TETOUAN / Saniat R‘mel",
+        "id": "TTN",
+        "type": "DVOR/DME",
+        "raw_coordinates": "353551N 0051908W",
+        "components": [
+          {
+            "id": "TTN",
+            "type": "DVOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.835556,
+          30.259444
+        ]
+      },
+      "properties": {
+        "name": "ZAGORA",
+        "id": "ZAG",
+        "type": "DVOR/DME",
+        "raw_coordinates": "301534N 0055008W",
+        "components": [
+          {
+            "id": "ZAG",
+            "type": "DVOR/DME"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.85,
+          30.265833
+        ]
+      },
+      "properties": {
+        "name": "ZAGORA",
+        "id": "FJA",
+        "type": "NDB",
+        "raw_coordinates": "301557N 0055100W",
+        "components": [
+          {
+            "id": "FJA",
+            "type": "NDB"
+          }
+        ]
+      }
+    }
+  ]
+}

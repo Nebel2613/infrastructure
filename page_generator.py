@@ -6,7 +6,9 @@ Generates a standalone HTML file with a Leaflet + Proj4Leaflet map styled to
 mirror an en-route ATC situation display:
   - Dark navy background, no land/ocean differentiation
   - Muted country borders, brighter sector outlines
-  - Triangle fix symbols (filled = IFR, open = VFR, amber = conflict)
+  - Triangle fix symbols (filled = IFR, open = VFR)
+  - Hexagon navaid symbols (VOR / DME / NDB), labelled with the ident
+  - Thin ATS route lines (hover = highlight route, click = segment details)
   - Permanent monospace labels next to each fix
   - Morocco Lambert Conformal Conic CRS
   - Runtime cropping of border features outside waypoint extent + padding
@@ -14,16 +16,19 @@ mirror an en-route ATC situation display:
 Pure stdlib — no external Python dependencies.
 
 Usage:
-    python visualize_waypoints.py waypoints.geojson [output.html] [borders.geojson] [sectors.geojson]
+    python page_generator.py waypoints.geojson [output.html] [borders.geojson] [sectors.geojson] [navaids.geojson] [routes.geojson]
 """
 
 import json
+import re
 import sys
 from pathlib import Path
 
 # ─── Defaults ──────────────────────────────────────────────────────────────
 DEFAULT_BORDERS_PATH = "borders.geojson"
 DEFAULT_SECTORS_PATH = "sectors.geojson"
+DEFAULT_NAVAIDS_PATH = "navaids.geojson"
+DEFAULT_ROUTES_PATH = "routes.geojson"
 
 # Map view padding around waypoint extent (degrees)
 VIEW_PADDING_DEG = 1.5
@@ -155,8 +160,8 @@ def crop_geojson_to_bbox(geo, bbox, padding=0.0):
 
 
 def compute_stats(features):
-    """Return dict of counts, treating conflict as a status (orthogonal to flight type)."""
-    ifr = vfr = conflict = 0
+    """Return dict of IFR / VFR / total counts."""
+    ifr = vfr = 0
     for f in features:
         props = f.get("properties") or {}
         ft = props.get("flight_type")
@@ -164,15 +169,186 @@ def compute_stats(features):
             ifr += 1
         elif ft == "VFR":
             vfr += 1
-        if props.get("has_conflict"):
-            conflict += 1
-    return {"total": len(features), "ifr": ifr, "vfr": vfr, "conflict": conflict}
+    return {"total": len(features), "ifr": ifr, "vfr": vfr}
+
+
+# ─── Label priority ────────────────────────────────────────────────────────
+# When labels overlap, the lower-priority one is hidden. Lower number wins:
+#   sector transfer points → navaids (by type) → IFR fixes (FIR boundary →
+#   on a route → TMA only / other → approach only) → VFR fixes.
+
+NAVAID_PRIORITY = {"DVOR/DME": 0, "VOR/DME": 0, "VOR": 1, "DME": 2,
+                   "NDB": 3, "Locator": 4}
+IFR_PRIORITY = {"transfer": -1, "fir": 10, "route": 11, "tma": 12, "approach": 13}
+# IFR classes whose label may move above the symbol when the right side is
+# taken (navaids always may). TMA-only, approach-only and VFR fixes may not.
+MOVE_UP_CLASSES = ("transfer", "fir", "route")
+# Words that mark a fix as approach-only (hidden by default on the map)
+APPROACH_WORDS = re.compile(r"\b(IAF|IF|FAF|STAR|SID|RWY|DEP|ARR)\b")
+VFR_PRIORITY = 20
+
+# Marine NDBs are beacons for ships, not aviation aids: left off the map
+HIDDEN_NAVAID_TYPES = ("NDB (marin)",)
+# Map label for merged navaids (the popup still shows the full ident)
+NAVAID_LABEL_OVERRIDES = {"CBA/SAK": "SAK"}
+# Navaids whose label goes above the symbol instead of to the right, because
+# a neighbouring navaid's symbol sits right where the label would be
+NAVAID_LABEL_ABOVE = {"FES", "ADM"}
+
+# Route designators like UN858, G/UG5, A411, J744 (and the odd "GUG 5")
+ROUTE_RE = re.compile(r"\b(?:[A-Z]/?)?U?[A-Z]\s?\d{1,4}[A-Z]?\b(?![.,]\d)")
+
+
+def ifr_class(routes_text, fra_relevance=""):
+    """Classify an IFR fix by its 'routes' text:
+    transfer, fir, route, tma (also anything unrecognised) or approach."""
+    text = routes_text or ""
+    if "transfert secteur" in text:
+        return "transfer"
+    if "FIR" in text or "BDRY" in text:
+        return "fir"
+    if ROUTE_RE.search(text) or fra_relevance:
+        return "route"
+    if "TMA" not in text and APPROACH_WORDS.search(text):
+        return "approach"
+    return "tma"
+
+
+def prepare_waypoints(geo):
+    """Copy waypoint features, adding _class and _priority for the page."""
+    out = []
+    for feat in (geo or {}).get("features", []):
+        props = dict(feat.get("properties") or {})
+        if (props.get("flight_type") or "").upper() == "VFR":
+            props["_class"] = "vfr"
+            props["_priority"] = VFR_PRIORITY
+        else:
+            cls = ifr_class(props.get("routes"), props.get("fra_relevance"))
+            props["_class"] = "approach" if cls == "approach" else "ifr"
+            # More route designators = slightly more important within a tier
+            n_routes = len(ROUTE_RE.findall(props.get("routes") or ""))
+            props["_priority"] = IFR_PRIORITY[cls] - min(n_routes, 9) / 10
+            # High-level fixes may move their label above the symbol
+            props["_move_up"] = cls in MOVE_UP_CLASSES
+        out.append({**feat, "properties": props})
+    return {"type": "FeatureCollection", "features": out}
+
+
+def prepare_navaids(geo):
+    """Copy navaid features minus hidden types, adding _label and _priority."""
+    if not geo:
+        return None
+    out = []
+    for feat in geo.get("features", []):
+        props = dict(feat.get("properties") or {})
+        nav_type = props.get("type") or ""
+        if nav_type in HIDDEN_NAVAID_TYPES:
+            continue
+        # Merged navaids ("DME + NDB") rank by their most important part
+        parts = [t.strip() for t in nav_type.split("+")]
+        props["_priority"] = min(NAVAID_PRIORITY.get(t, 5) for t in parts)
+        props["_label"] = NAVAID_LABEL_OVERRIDES.get(props.get("id"), props.get("id"))
+        if props.get("id") in NAVAID_LABEL_ABOVE:
+            props["_label_pos"] = "above"
+        out.append({**feat, "properties": props})
+    return {"type": "FeatureCollection", "features": out}
 
 
 # ─── HTML template ─────────────────────────────────────────────────────────
 # A static HTML template with a single `__PAYLOAD__` placeholder. Using a
 # placeholder rather than an f-string means CSS/JS braces don't need to be
 # doubled — a far less error-prone approach for templates of this size.
+
+# Per-route fields shown in the segment popup
+ROUTE_FIELDS = ("route", "from", "to", "track_mag", "track_inherited", "distance_nm",
+                "layers", "width_nm", "odd", "even", "control", "tma", "notes", "issues",
+                "route_notes", "source", "nav_spec")
+
+
+def add_route_point_details(routes_geo, *fix_collections):
+    """Copy ENR 3.1/3.2 point details (FIR boundary pair, RDL or VOR/DME fix
+    reference) onto the
+    matching waypoint / navaid features, by name or navaid ident."""
+    details = {}
+    for f in (routes_geo or {}).get("features", []):
+        p = f["properties"]
+        if f["geometry"]["type"] != "Point":
+            continue
+        d = {k: p[k] for k in ("fir_boundary", "rdl", "fix_ref") if p.get(k)}
+        if d:
+            details[str(p["name"]).upper()] = d
+            if p.get("navaid"):
+                details[str(p["navaid"]).upper()] = d
+    for geo in fix_collections:
+        for f in (geo or {}).get("features", []):
+            p = f["properties"]
+            keys = [str(p.get("name", "")).upper()] + \
+                   [str(c["id"]).upper() for c in p.get("components", [])]
+            d = next((details[k] for k in keys if k in details), None)
+            if d:
+                p["_fir_boundary"] = d.get("fir_boundary")
+                p["_rdl"] = d.get("rdl")
+                p["_fix_ref"] = d.get("fix_ref")
+
+
+def prepare_routes(routes_geo, waypoints_geo, navaids_geo):
+    """ATS route segments from routes.geojson (made by route_parser.py).
+
+    Lower and upper routes usually share the same segment (A 411 / UA 411), so
+    segments joining the same two positions are drawn once and list every
+    route on them. Route points that no other layer has (e.g. ARENA, CABEL,
+    outside the FIR) are returned too, so the lines don't end in empty space.
+    """
+    if not routes_geo:
+        return None
+    segments, by_key = [], {}
+    designators, types = set(), {}
+    extra_points = []
+
+    known = set()
+    for f in (waypoints_geo or {}).get("features", []):
+        known.add(str(f["properties"].get("name", "")).upper())
+    for f in (navaids_geo or {}).get("features", []):
+        p = f["properties"]
+        known.update(str(x).upper() for x in str(p.get("id", "")).split("/"))
+        known.update(str(c["id"]).upper() for c in p.get("components", []))
+
+    points_by_route = {}   # designator -> names/idents of its points (for search)
+    for f in routes_geo.get("features", []):
+        geom, p = f["geometry"], f["properties"]
+        if geom["type"] == "Point":
+            for d in p.get("routes", []):
+                names = points_by_route.setdefault(d, set())
+                names.add(str(p["name"]).upper())
+                if p.get("navaid"):
+                    names.add(str(p["navaid"]).upper())
+            if p.get("kind") == "route_point" and \
+                    str(p["name"]).upper() not in known and \
+                    str(p.get("navaid") or "").upper() not in known:
+                extra_points.append(f)
+            continue
+        if geom["type"] != "LineString":
+            continue
+        # same two points = same line, whichever document or direction
+        key = tuple(sorted((p["from"], p["to"])))
+        seg = by_key.get(key)
+        if seg is None:
+            seg = by_key[key] = {"coords": geom["coordinates"], "routes": []}
+            segments.append(seg)
+        seg["routes"].append({k: p.get(k) for k in ROUTE_FIELDS})
+        designators.add(p["route"])
+        types[p["route"]] = "rnav" if p.get("nav_spec") else "conventional"
+
+    # Shaped like IFR waypoints so they share the fix symbol, popup and declutter
+    extra = [{"type": "Feature", "geometry": f["geometry"], "properties": {
+                "name": f["properties"]["name"], "flight_type": "IFR",
+                "routes": "On " + ", ".join(f["properties"].get("routes", []))
+                          + " (from ENR 3.1; not listed in ENR 4.4)",
+                "_class": "ifr", "_priority": IFR_PRIORITY["route"], "_move_up": True}}
+             for f in extra_points]
+    return {"segments": segments, "count": len(designators), "extra_points": extra, "types": types,
+            "points": {d: sorted(n) for d, n in points_by_route.items()}}
+
 
 HTML_TEMPLATE = r"""<!DOCTYPE html>
 <html lang="en">
@@ -195,8 +371,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
             --sector-soft: rgba(62, 181, 212, 0.08);
             --fix-ifr: #5fd0e8;
             --fix-vfr: #7dd16f;
-            --fix-conflict: #f4b942;
-            --conflict-glow: rgba(244, 185, 66, 0.55);
+            --fix-navaid: #9db4c8;
             --label: #c8d8e8;
             --label-dim: #6a829a;
             --panel-bg: rgba(10, 23, 39, 0.88);
@@ -206,6 +381,8 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
             --accent: #5fd0e8;
             --rbl: #d4a72c;
             --rbl-bright: #ffd24a;
+            --route: #5d7790;
+            --route-hl: #5fd0e8;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -263,17 +440,11 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
             filter: drop-shadow(0 0 3px rgba(125, 209, 111, 0.4));
         }
 
-        .atc-fix.conflict path {
-            fill: var(--fix-conflict);
-            stroke: #ff5a5a;
-            stroke-width: 1;
-            filter: drop-shadow(0 0 5px var(--conflict-glow));
-            animation: conflict-pulse 1.8s ease-in-out infinite;
-        }
-
-        @keyframes conflict-pulse {
-            0%, 100% { filter: drop-shadow(0 0 4px var(--conflict-glow)); }
-            50%      { filter: drop-shadow(0 0 9px var(--conflict-glow)); }
+        .atc-fix.navaid path {
+            fill: rgba(157, 180, 200, 0.15);
+            stroke: var(--fix-navaid);
+            stroke-width: 1.4;
+            filter: drop-shadow(0 0 3px rgba(157, 180, 200, 0.4));
         }
 
         .atc-label {
@@ -296,9 +467,34 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         .atc-label:hover { opacity: 1; color: var(--accent); }
         .atc-label.vfr { color: var(--fix-vfr); opacity: 0.78; }
         .atc-label.vfr:hover { opacity: 1; color: var(--fix-vfr); }
+        .atc-label.navaid { color: var(--fix-navaid); }
+        .atc-label.above { left: 7px; top: -15px; transform: translateX(-50%); }
+        .atc-label.below { left: 7px; top: 15px;  transform: translateX(-50%); }
+        .atc-label.navaid:hover { opacity: 1; color: var(--fix-navaid); }
         .atc-fix:hover + .atc-label,
         .atc-fix:hover .atc-label { opacity: 1; }
-        .labels-hidden .atc-label { display: none; }
+        .labels-hidden .atc-label:not(.route-label) { display: none; }
+        /* Airway designator in the middle of a route segment */
+        .atc-label.route-label {
+            left: 7px;
+            top: 7px;
+            transform: translate(-50%, -50%);
+            font-size: 9px;
+            letter-spacing: 0.5px;
+            color: #8fa7be;
+            background: rgba(6, 13, 24, 0.88);
+            padding: 0 3px;
+            border-radius: 2px;
+            opacity: 0.9;
+            pointer-events: none;
+            cursor: default;
+        }
+        .atc-label.route-label.route-label-hl { color: var(--route-hl); opacity: 1; }
+        /* Decluttering: lower-priority labels that overlap are hidden; hovering
+           a fix reveals its label and hides the ones it overlaps meanwhile. */
+        .atc-label.declutter-hidden,
+        .atc-label.hover-suppressed { visibility: hidden; }
+        .atc-label.hover-reveal { visibility: visible !important; }
 
         /* ─── RBL mode ────────────────────────────────────────────── */
         .atc-fix.rbl-selected path,
@@ -435,7 +631,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         .stats .stat-value { color: var(--text); font-weight: 500; }
         .stats .stat-value.ifr      { color: var(--fix-ifr); }
         .stats .stat-value.vfr      { color: var(--fix-vfr); }
-        .stats .stat-value.conflict { color: var(--fix-conflict); }
+        .stats .stat-value.navaid   { color: var(--fix-navaid); }
 
         /* ─── Control box (mode + display + speed) ────────────────── */
         .control-box {
@@ -508,6 +704,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         }
         .filter-item:hover { color: var(--accent); }
         .filter-item input { margin-right: 9px; accent-color: var(--accent); }
+        .filter-item.filter-sub { padding-left: 18px; }
         .filter-item .count {
             margin-left: auto;
             font-family: 'JetBrains Mono', monospace;
@@ -597,6 +794,73 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         }
         .badge-ifr { background: rgba(95, 208, 232, 0.18); color: var(--fix-ifr); border: 1px solid var(--fix-ifr); }
         .badge-vfr { background: rgba(125, 209, 111, 0.18); color: var(--fix-vfr); border: 1px solid var(--fix-vfr); }
+        .badge-navaid { background: rgba(157, 180, 200, 0.18); color: var(--fix-navaid); border: 1px solid var(--fix-navaid); }
+        .badge-route  { background: rgba(93, 119, 144, 0.22); color: var(--text); border: 1px solid var(--route); }
+
+        /* ─── ATS routes ─────────────────────────────────────────── */
+        .route-popup .badge { margin-bottom: 8px; }
+        .route-popup .badge + .badge { margin-left: 5px; }
+        .route-popup .variant + .variant { margin-top: 3px; }
+        .route-popup .route-tag {
+            margin-left: 6px;
+            color: var(--text-dim);
+            font-size: 9px;
+            letter-spacing: 0.6px;
+        }
+        .route-popup td:last-child { white-space: nowrap; }
+        .route-popup td:first-child { padding-right: 12px; }
+        .route-popup .note { color: var(--text-dim); font-size: 10px; }
+        .route-popup .route-notes {
+            max-width: 300px;
+            margin-top: 8px;
+            padding-top: 6px;
+            border-top: 1px solid var(--panel-border);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            line-height: 1.45;
+        }
+        .route-popup .route-notes div + div { margin-top: 4px; }
+        .route-popup h5 {
+            font-size: 8.5px;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-bottom: 3px;
+        }
+        .route-popup .source {
+            max-width: 300px;
+            margin-top: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 9px;
+            color: var(--text-dim);
+            letter-spacing: 0.4px;
+        }
+        .route-popup .remark {
+            max-width: 300px;
+            margin-top: 7px;
+            padding-top: 6px;
+            border-top: 1px solid var(--panel-border);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            line-height: 1.45;
+            color: var(--text);
+        }
+        .route-popup .dim  { color: var(--text-dim); }
+        .leaflet-tooltip.route-tooltip {
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 2px;
+            color: var(--route-hl);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10.5px;
+            letter-spacing: 0.8px;
+            padding: 2px 7px;
+            box-shadow: none;
+        }
+        .leaflet-tooltip.route-tooltip::before { display: none; }
+        .rbl-active .route-hit { cursor: crosshair; }
+        path.route-hit:focus { outline: none; }
 
         .waypoint-popup table { width: 100%; font-size: 11px; border-collapse: collapse; }
         .waypoint-popup td { padding: 3px 0; vertical-align: top; font-family: 'JetBrains Mono', monospace; }
@@ -609,17 +873,6 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
             padding-top: 5px;
         }
 
-        .conflict-warning {
-            margin-top: 10px;
-            padding: 7px 9px;
-            background: rgba(244, 185, 66, 0.1);
-            border: 1px solid var(--fix-conflict);
-            border-radius: 2px;
-            font-size: 10.5px;
-            color: var(--fix-conflict);
-            font-family: 'JetBrains Mono', monospace;
-        }
-
         /* Zoom controls */
         .leaflet-control-zoom a {
             background: var(--panel-bg) !important;
@@ -628,6 +881,8 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
             backdrop-filter: blur(8px);
         }
         .leaflet-control-zoom a:hover { color: var(--accent) !important; }
+        /* sits above the cursor-coordinates box */
+        .leaflet-bottom.leaflet-right .leaflet-control-zoom { margin: 0 12px 54px 0; }
 
         /* Attribution */
         .leaflet-control-attribution {
@@ -666,24 +921,59 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     </div>
 
     <div class="panel search-box">
-        <input type="text" id="search" placeholder="Search waypoint…" autocomplete="off" />
+        <input type="text" id="search" placeholder="Search waypoint or route…" autocomplete="off" />
     </div>
 
     <div class="panel filter-box">
         <h4>Filters</h4>
         <label class="filter-item">
-            <input type="checkbox" id="filter-ifr" checked />
+            <input type="checkbox" autocomplete="off" id="filter-ifr" checked />
             <span>IFR Fixes</span>
             <span class="count" id="count-ifr">0</span>
         </label>
+        <label class="filter-item filter-sub">
+            <input type="checkbox" autocomplete="off" id="filter-approach" />
+            <span>Approach only</span>
+            <span class="count" id="count-approach">0</span>
+        </label>
         <label class="filter-item">
-            <input type="checkbox" id="filter-vfr" checked />
+            <input type="checkbox" autocomplete="off" id="filter-vfr" checked />
             <span>VFR Fixes</span>
             <span class="count" id="count-vfr">0</span>
         </label>
         <label class="filter-item">
-            <input type="checkbox" id="filter-labels" checked />
+            <input type="checkbox" autocomplete="off" id="filter-navaid" checked />
+            <span>Navaids</span>
+            <span class="count" id="count-navaid">0</span>
+        </label>
+        <label class="filter-item">
+            <input type="checkbox" autocomplete="off" id="filter-routes" checked />
+            <span>ATS Routes</span>
+            <span class="count" id="count-routes">0</span>
+        </label>
+        <label class="filter-item filter-sub">
+            <input type="checkbox" autocomplete="off" id="filter-routes-lower" checked />
+            <span>Lower</span>
+        </label>
+        <label class="filter-item filter-sub">
+            <input type="checkbox" autocomplete="off" id="filter-routes-upper" checked />
+            <span>Upper (U…)</span>
+        </label>
+        <label class="filter-item filter-sub">
+            <input type="checkbox" autocomplete="off" id="filter-routes-conv" checked />
+            <span>Conventional</span>
+        </label>
+        <label class="filter-item filter-sub">
+            <input type="checkbox" autocomplete="off" id="filter-routes-rnav" checked />
+            <span>RNAV</span>
+        </label>
+        <label class="filter-item">
+            <input type="checkbox" autocomplete="off" id="filter-labels" checked />
             <span>Fix Name</span>
+        </label>
+        <label class="filter-item">
+            <input type="checkbox" autocomplete="off" id="filter-route-names" checked />
+            <span>Route Name</span>
         </label>
     </div>
 
@@ -696,6 +986,14 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         <div class="legend-item">
             <span class="legend-marker"><svg width="14" height="14" viewBox="-7 -7 14 14"><path d="M 0,-5.5 L 4.8,3.5 L -4.8,3.5 Z" fill="none" stroke="#7dd16f" stroke-width="1.4"/></svg></span>
             VFR Reporting Point
+        </div>
+        <div class="legend-item">
+            <span class="legend-marker"><svg width="14" height="14" viewBox="-7 -7 14 14"><path d="M -5,0 L -2.5,-4.33 L 2.5,-4.33 L 5,0 L 2.5,4.33 L -2.5,4.33 Z" fill="rgba(157,180,200,0.15)" stroke="#9db4c8" stroke-width="1.4"/></svg></span>
+            Navaid (VOR / DME / NDB)
+        </div>
+        <div class="legend-item">
+            <span class="legend-marker"><svg width="16" height="14" viewBox="0 -7 16 14"><line x1="0" y1="0" x2="16" y2="0" stroke="#5d7790" stroke-width="1.2"/></svg></span>
+            ATS Route
         </div>
     </div>
 
@@ -718,6 +1016,8 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         const waypoints = PAYLOAD.waypoints;
         const borders   = PAYLOAD.borders;
         const sectors   = PAYLOAD.sectors;
+        const navaids   = PAYLOAD.navaids;
+        const routes    = PAYLOAD.routes;
         const view      = PAYLOAD.view;
         const stats     = PAYLOAD.stats;
         const title     = PAYLOAD.title;
@@ -726,15 +1026,18 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         // ─── Header + counts ───────────────────────────────────────────
         document.getElementById('title-text').textContent = title;
         document.getElementById('subtitle-text').textContent = subtitle;
-        document.getElementById('count-ifr').textContent = stats.ifr.toString().padStart(3, '0');
+        document.getElementById('count-ifr').textContent = (stats.ifr - stats.approach).toString().padStart(3, '0');
+        document.getElementById('count-approach').textContent = stats.approach.toString().padStart(3, '0');
         document.getElementById('count-vfr').textContent = stats.vfr.toString().padStart(3, '0');
+        document.getElementById('count-navaid').textContent = stats.navaid.toString().padStart(3, '0');
+        document.getElementById('count-routes').textContent = (stats.routes || 0).toString().padStart(3, '0');
 
         const statsHtml = [
-            ['total',    stats.total, ''],
-            ['ifr',      stats.ifr,   'ifr'],
-            ['vfr',      stats.vfr,   'vfr'],
-        ].concat(stats.conflict > 0 ? [['conflict', stats.conflict, 'conflict']] : [])
-         .map(([label, val, cls]) =>
+            ['total',    stats.total,  ''],
+            ['ifr',      stats.ifr,    'ifr'],
+            ['vfr',      stats.vfr,    'vfr'],
+            ['navaid',   stats.navaid, 'navaid'],
+        ].map(([label, val, cls]) =>
             `<div class="stat-block"><span class="stat-label">${label}</span>` +
             `<span class="stat-value ${cls}">${String(val).padStart(3, '0')}</span></div>`
          ).join('');
@@ -788,7 +1091,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
             crs: moroccoLambert,
             center: [(view.min_lat + view.max_lat) / 2, (view.min_lon + view.max_lon) / 2],
             zoom: 5,
-            zoomControl: true,
+            zoomControl: false,   // added bottom-right below, clear of the panels
             zoomSnap: 0.25,
             zoomDelta: 0.5,
             wheelPxPerZoomLevel: 100,
@@ -800,6 +1103,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
             attributionControl: true
         });
         map.attributionControl.setPrefix('');
+        L.control.zoom({ position: 'bottomright' }).addTo(map);
 
         // Fit to view bounds without animation (avoids initial flash)
         map.fitBounds(
@@ -866,8 +1170,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         function buildIcon(props) {
             const ft        = (props.flight_type || '').toUpperCase();
             const isVFR     = ft === 'VFR';
-            const isConflict = !!props.has_conflict;
-            const cls = isConflict ? 'conflict' : (isVFR ? 'vfr' : 'ifr');
+            const cls = isVFR ? 'vfr' : 'ifr';
             const labelCls = isVFR ? 'atc-label vfr' : 'atc-label';
             const name = escapeHtml(props.name || '????');
             const html =
@@ -901,43 +1204,78 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
             if (ft === 'IFR' && props.fra_relevance) {
                 html += `<tr><td>FRA</td><td>${escapeHtml(props.fra_relevance)}</td></tr>`;
             }
+            html += enr31Rows(props);
             if (ft === 'VFR' && props.location) {
                 html += `<tr><td>Location</td><td>${escapeHtml(props.location)}</td></tr>`;
             }
             html += '</table>';
-            if (props.has_conflict) {
-                const detail = escapeHtml(props.conflict_details || 'Extraction mismatch detected');
-                html += `<div class="conflict-warning">⚠ ${detail}</div>`;
-            }
             html += '</div>';
             return html;
         }
 
-        const ifrLayer = L.layerGroup().addTo(map);
-        const vfrLayer = L.layerGroup().addTo(map);
+        // ─── Navaid markers (hexagon, labelled with the ident) ─────────
+        const HEXAGON_PATH = 'M -5,0 L -2.5,-4.33 L 2.5,-4.33 L 5,0 L 2.5,4.33 L -2.5,4.33 Z';
 
-        waypoints.features.forEach(feat => {
-            const geom = feat.geometry || {};
-            if (geom.type !== 'Point') return;
-            const coords = geom.coordinates;
-            const props  = feat.properties || {};
-            const ft     = (props.flight_type || '').toUpperCase();
-            const isVFR  = ft === 'VFR';
+        function buildNavaidIcon(props) {
+            const ident = escapeHtml(props._label || props.id || '???');
+            const html =
+                `<div class="atc-fix navaid">` +
+                `<svg width="14" height="14" viewBox="-7 -7 14 14"><path d="${HEXAGON_PATH}"/></svg>` +
+                `</div>` +
+                `<span class="atc-label navaid${props._label_pos === 'above' ? ' above' : ''}">${ident}</span>`;
+            return L.divIcon({
+                html: html,
+                className: 'atc-marker-wrapper',
+                iconSize: [14, 14],
+                iconAnchor: [7, 7]
+            });
+        }
 
+        function buildNavaidPopup(props, coords) {
+            const ident = escapeHtml(props.id || '???');
+            const station = escapeHtml(props.name || '');
+            const rawCoords = escapeHtml(props.raw_coordinates || '');
+            let html = `<div class="waypoint-popup"><h3>${ident}</h3>`;
+            const navType = escapeHtml(props.type || 'NAVAID');
+            html += `<span class="badge badge-navaid">${navType}</span><table>`;
+            if (station) html += `<tr><td>Station</td><td>${station}</td></tr>`;
+            if (props.type) html += `<tr><td>Type</td><td>${navType}</td></tr>`;
+            if (rawCoords) html += `<tr><td>Sexagesimal</td><td>${rawCoords}</td></tr>`;
+            html += `<tr><td>WGS84</td><td>${coords[1].toFixed(4)}°, ${coords[0].toFixed(4)}°</td></tr>`;
+            html += enr31Rows(props);
+            html += '</table></div>';
+            return html;
+        }
+
+        // Point details printed in the route tables (ENR 3.1 / 3.2)
+        function enr31Rows(props) {
+            let html = '';
+            if (props._fir_boundary) html += `<tr><td>FIR bdy</td><td>${escapeHtml(props._fir_boundary)}</td></tr>`;
+            const refs = [];
+            if (props._rdl) refs.push(escapeHtml(props._rdl));
+            const f = props._fix_ref;
+            if (f) refs.push(`${escapeHtml(f.navaid)} ${String(f.bearing).padStart(3, '0')}° / ${f.distance_nm} NM`);
+            if (refs.length) html += `<tr><td>Fix ref</td><td>${refs.join('<br>')}</td></tr>`;
+            return html;
+        }
+
+        const layers = {
+            ifr:    L.layerGroup().addTo(map),
+            vfr:      L.layerGroup().addTo(map),
+            approach: L.layerGroup().addTo(map),
+            navaid:   L.layerGroup().addTo(map),
+        };
+
+        // Shared marker setup for waypoints and navaids: popup, RBL, search.
+        function addFix(coords, icon, record, popupHtml) {
             const marker = L.marker([coords[1], coords[0]], {
-                icon: buildIcon(props),
+                icon: icon,
                 riseOnHover: true,
                 keyboard: false
             });
-
-            const record = {
-                marker: marker,
-                name: (props.name || '').toUpperCase(),
-                category: isVFR ? 'vfr' : 'ifr',
-                hasConflict: !!props.has_conflict,
-                props: props,
-                coords: coords
-            };
+            record.marker = marker;
+            record.coords = coords;
+            record.popupHtml = popupHtml;
             markers.push(record);
 
             marker.on('click', (e) => {
@@ -947,7 +1285,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
                 } else {
                     L.popup({ closeButton: true, maxWidth: 320 })
                         .setLatLng(marker.getLatLng())
-                        .setContent(buildPopup(props, coords))
+                        .setContent(popupHtml)
                         .openOn(map);
                 }
             });
@@ -956,10 +1294,274 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
                 if (document.body.classList.contains('rbl-active') && record !== rblFirstFix) {
                     setRblHover(record, true);
                 }
+                revealLabel(record);
             });
-            marker.on('mouseout', () => { setRblHover(record, false); });
+            marker.on('mouseout', () => {
+                setRblHover(record, false);
+                unrevealLabel(record);
+            });
 
-            (isVFR ? vfrLayer : ifrLayer).addLayer(marker);
+            layers[record.category].addLayer(marker);
+        }
+
+        waypoints.features.forEach(feat => {
+            const geom = feat.geometry || {};
+            if (geom.type !== 'Point') return;
+            const props = feat.properties || {};
+            const name  = (props.name || '').toUpperCase();
+            addFix(geom.coordinates, buildIcon(props), {
+                name: name,
+                search: name,
+                category: props._class || 'ifr',
+                priority: props._priority != null ? props._priority : 15,
+                canMoveUp: !!props._move_up,
+                props: props
+            }, buildPopup(props, geom.coordinates));
+        });
+
+        ((navaids && navaids.features) || []).forEach(feat => {
+            const geom = feat.geometry || {};
+            if (geom.type !== 'Point') return;
+            const props = feat.properties || {};
+            const ident = (props.id || '').toUpperCase();
+            addFix(geom.coordinates, buildNavaidIcon(props), {
+                name: ident,
+                // Search by ident (incl. each part of merged ones like CBA/SAK) or station name
+                search: ident + ' ' + safeUpper(props.name),
+                idents: ident.split('/'),
+                category: 'navaid',
+                priority: props._priority != null ? props._priority : 5,
+                canMoveUp: true,
+                fixedAbove: props._label_pos === 'above',
+                props: props
+            }, buildNavaidPopup(props, geom.coordinates));
+        });
+
+        // ─── ATS routes ────────────────────────────────────────────────
+        // One thin line per segment (lower/upper twins share it). An invisible
+        // wider line on top makes the thin one easy to hover and click.
+        // Hover = highlight every segment of the route(s); click = details.
+        const ROUTE_STYLE    = { color: '#5d7790', weight: 1.1, opacity: 0.75 };
+        const ROUTE_STYLE_HL = { color: '#5fd0e8', weight: 2.2, opacity: 1 };
+        const routesLayer = L.layerGroup().addTo(map);
+        const routeSegs   = [];
+        const segsByRoute = {};
+        const routeHover  = new Set();   // designators highlighted by the mouse
+        let routeSearch   = null;        // designator matched by the search box
+        const routePoints = (routes && routes.points) || {};
+        const normRoute    = s => String(s || '').toUpperCase().replace(/\s+/g, '');
+        const isUpperRoute = d => /^U/.test(d);
+        const pad3 = n => String(n).padStart(3, '0');
+
+        function directionText(r, key) {
+            if (r[key] === 'forward')  return `${escapeHtml(r.from)} → ${escapeHtml(r.to)}`;
+            if (r[key] === 'backward') return `${escapeHtml(r.to)} → ${escapeHtml(r.from)}`;
+            return '<span class="dim">—</span>';
+        }
+
+        // Flags already shown another way in the popup
+        const SHOWN_ISSUES = /^(levels cell is blank|no cruising-level arrows)/;
+
+        // A route's data seen in the segment's own direction (A → B). A twin
+        // listed the other way round gets its tracks and odd/even swapped.
+        function orient(r, A, B) {
+            const flip = r.from !== A;
+            const dir = d => flip ? ({ forward: 'backward', backward: 'forward' }[d] || d) : d;
+            return { ...r, from: A, to: B,
+                     track_mag: r.track_mag && (flip ? [r.track_mag[1], r.track_mag[0]] : r.track_mag),
+                     odd: dir(r.odd), even: dir(r.even) };
+        }
+
+        function levelValue(l) {
+            if (!l) return -1;
+            if (/^FL/.test(l)) return +l.slice(2) * 100;
+            if (/FT$/.test(l)) return parseInt(l, 10);
+            return l === 'UNL' ? 1e6 : 0;
+        }
+
+        const routeTag = names => `<span class="route-tag">${names.map(escapeHtml).join(' · ')}</span>`;
+
+        // One row per field. When every route agrees the value is shown once;
+        // otherwise each distinct value gets a line labelled with its route(s).
+        function mergedRow(label, rs, valueOf) {
+            const groups = new Map();
+            rs.forEach(r => {
+                const v = valueOf(r);
+                if (v == null || v === '') return;
+                if (!groups.has(v)) groups.set(v, []);
+                groups.get(v).push(r.route);
+            });
+            if (!groups.size) return '';
+            const shared = groups.size === 1 && [...groups.values()][0].length === rs.length;
+            const cell = shared ? [...groups.keys()][0]
+                : [...groups].map(([v, names]) => `<div class="variant">${v} ${routeTag(names)}</div>`).join('');
+            return `<tr><td>${label}</td><td>${cell}</td></tr>`;
+        }
+
+        // Same idea on one line: "230°M" or "230°M A 600 · 231°M UA 600"
+        function inlineVariants(rs, valueOf) {
+            const groups = new Map();
+            rs.forEach(r => {
+                const v = valueOf(r);
+                if (v == null) return;
+                if (!groups.has(v)) groups.set(v, []);
+                groups.get(v).push(r.route);
+            });
+            if (groups.size === 1 && [...groups.values()][0].length === rs.length) return [...groups.keys()][0];
+            return [...groups].map(([v, names]) => `${v}${routeTag(names)}`).join(' · ');
+        }
+
+        // Texts printed by several routes, each once; texts that differ only in
+        // capitals or spacing count as the same. Returns [[text, routes], ...]
+        function groupTexts(rs, listOf) {
+            const groups = new Map();
+            rs.forEach(r => (listOf(r) || []).forEach(t => {
+                const key = t.toLowerCase().replace(/[\s,.;:\/]+/g, '');
+                if (!groups.has(key)) groups.set(key, [t, []]);
+                const names = groups.get(key)[1];
+                if (!names.includes(r.route)) names.push(r.route);
+            }));
+            return [...groups.values()];
+        }
+        const tagIfPartial = (names, rs) => names.length < rs.length ? routeTag(names) : '';
+
+        // All layers of all routes as one stack, highest first
+        function levelsRow(rs) {
+            const layers = new Map();
+            rs.forEach(r => (r.layers || []).forEach(l => {
+                const key = `${l.upper}|${l.lower}|${l['class']}`;
+                if (!layers.has(key)) layers.set(key, { l, routes: [] });
+                layers.get(key).routes.push(r.route);
+            }));
+            const lines = [...layers.values()]
+                .sort((a, b) => levelValue(b.l.upper) - levelValue(a.l.upper) ||
+                                levelValue(b.l.lower) - levelValue(a.l.lower))
+                .map(({ l, routes }) =>
+                    `<div class="variant">${escapeHtml(l.upper)} – ${escapeHtml(l.lower)}` +
+                    (l['class'] ? ` · Class ${escapeHtml(l['class'])}` : '') +
+                    (routes.length < rs.length ? ' ' + routeTag(routes) : '') + '</div>');
+            const missing = rs.filter(r => !(r.layers || []).length).map(r => r.route);
+            if (missing.length) {
+                lines.push(`<div class="variant dim">not published in AIP Maroc` +
+                           (missing.length < rs.length ? ' ' + routeTag(missing) : '') + '</div>');
+            }
+            return `<tr><td>Levels</td><td>${lines.join('')}</td></tr>`;
+        }
+
+        function buildRoutePopup(seg) {
+            const A = seg.routes[0].from, B = seg.routes[0].to;
+            const rs = seg.routes.map(r => orient(r, A, B));
+            const a = escapeHtml(A), b = escapeHtml(B);
+            let html = `<div class="waypoint-popup route-popup"><h3>${a} – ${b}</h3>` +
+                       [...new Set(rs.map(r => r.route))]
+                           .map(n => `<span class="badge badge-route">${escapeHtml(n)}</span>`).join('') +
+                       '<table>';
+            if (rs.some(r => r.track_mag)) {
+                const dirLine = (to, i) => `<div class="variant">→ ${to}&nbsp; ` +
+                    inlineVariants(rs, r => r.track_mag ? pad3(r.track_mag[i]) + '°M' : null) + '</div>';
+                html += `<tr><td>Track</td><td>${dirLine(b, 0)}${dirLine(a, 1)}</td></tr>`;
+            }
+            if (rs.some(r => r.nav_spec)) {
+                html += mergedRow('Nav spec', rs, r => r.nav_spec || 'Conventional');
+            }
+            html += mergedRow('Distance', rs, r => r.distance_nm != null ? `${r.distance_nm.toFixed(1)} NM` : null);
+            html += levelsRow(rs);
+            html += mergedRow('Lateral', rs, r => r.width_nm != null ? `${r.width_nm} NM` : null);
+            html += mergedRow('Odd FL', rs, r => (r.odd || r.even) ? directionText(r, 'odd') : null);
+            html += mergedRow('Even FL', rs, r => (r.odd || r.even) ? directionText(r, 'even') : null);
+            html += mergedRow('Control', rs, r => (r.control || []).map(c =>
+                `${escapeHtml(c.unit)}` +
+                (c.freq ? ` ${escapeHtml(c.freq)}` : '') +
+                (c.qualifier ? ` <span class="dim">(${escapeHtml(c.qualifier)})</span>` : '') +
+                (c.backup ? `<br><span class="dim">backup ${escapeHtml(c.backup)}</span>` : '')).join('<br>'));
+            html += mergedRow('TMA', rs, r => (r.tma || []).map(t =>
+                `${escapeHtml(t.name)}<br><span class="dim">` +
+                [t.upper && t.lower ? `${escapeHtml(t.upper)} – ${escapeHtml(t.lower)}` : null,
+                 t['class'] ? `Class ${escapeHtml(t['class'])}` : null,
+                 t.app_freq ? `APP ${escapeHtml(t.app_freq)}` : null].filter(Boolean).join(' · ') +
+                '</span>').join('<br>'));
+            html += '</table>';
+            // remarks as printed (CDR hours, alternate routes…), each once
+            groupTexts(rs, r => r.notes).forEach(([n, names]) => {
+                html += `<div class="remark">${escapeHtml(n)}${tagIfPartial(names, rs)}</div>`;
+            });
+            // notes, each once, labelled when only some routes have it
+            groupTexts(rs, r => (r.issues || []).filter(i => !SHOWN_ISSUES.test(i))).forEach(([i, names]) => {
+                html += `<div class="note">⚠ ${escapeHtml(i)}${tagIfPartial(names, rs)}</div>`;
+            });
+            // notes printed for the whole route (continuation, CDR hours…)
+            const routeNotes = groupTexts(rs, r => r.route_notes);
+            if (routeNotes.length) {
+                html += '<div class="route-notes"><h5>Route notes</h5>' +
+                        routeNotes.map(([n, names]) => `<div>${escapeHtml(n)}${tagIfPartial(names, rs)}</div>`).join('') +
+                        '</div>';
+            }
+            // where it comes from: page, page date, AIRAC amendment
+            const sources = groupTexts(rs, r => r.source ? [
+                `${r.source.doc || 'ENR 3.1'}-${r.source.page}` + (r.source.date ? ` · ${r.source.date}` : '') +
+                (r.source.amdt ? ` · AIRAC AMDT ${r.source.amdt}` : '')] : []);
+            if (sources.length) {
+                html += '<div class="source">' +
+                        sources.map(([t, names]) => `<div>${escapeHtml(t)}${tagIfPartial(names, rs)}</div>`).join('') +
+                        '</div>';
+            }
+            return html + '</div>';
+        }
+
+        function refreshRouteStyles() {
+            routeSegs.forEach(rec => {
+                const hl = rec.names.some(n => routeHover.has(n) || n === routeSearch);
+                if (hl === rec.hl) return;
+                rec.hl = hl;
+                rec.line.setStyle(hl ? ROUTE_STYLE_HL : ROUTE_STYLE);
+                if (hl) rec.line.bringToFront();
+                const lbl = rec.label && labelEl(rec.label);
+                if (lbl) lbl.classList.toggle('route-label-hl', hl);
+            });
+        }
+
+        // Airway labels: shown from one zoom step past the overview, placed by
+        // the label declutter after all fix names (so they never cover one).
+        const ROUTE_LABEL_MIN_ZOOM = map.getZoom() + 1;
+        const ROUTE_LABEL_PRIORITY = 30;   // fixes are 0–20
+        const routeLabelLayer = L.layerGroup().addTo(map);
+        const routeLabels = [];
+
+        ((routes && routes.segments) || []).forEach(seg => {
+            const ll = seg.coords.map(c => [c[1], c[0]]);
+            const line = L.polyline(ll, { ...ROUTE_STYLE, interactive: false });
+            const hit  = L.polyline(ll, { color: '#000', opacity: 0, weight: 10, className: 'route-hit' });
+            const names = [...new Set(seg.routes.map(r => r.route))];
+            const rec = { names, line, hit, group: L.layerGroup([line, hit]),
+                          popupHtml: buildRoutePopup(seg), hl: false };
+            hit.bindTooltip(names.join(' · '), {
+                sticky: true, direction: 'top', offset: [0, -8], className: 'route-tooltip'
+            });
+            hit.on('mouseover', () => { names.forEach(n => routeHover.add(n)); refreshRouteStyles(); });
+            hit.on('mouseout',  () => { names.forEach(n => routeHover.delete(n)); refreshRouteStyles(); });
+            hit.on('click', e => {
+                // In RBL mode a click on a route counts as a click on the map
+                if (document.body.classList.contains('rbl-active')) return;
+                L.DomEvent.stopPropagation(e);
+                // keep the popup clear of the search box at the top
+                L.popup({ closeButton: true, maxWidth: 360, autoPanPaddingTopLeft: [20, 70] })
+                    .setLatLng(e.latlng)
+                    .setContent(rec.popupHtml)
+                    .openOn(map);
+            });
+            names.forEach(n => (segsByRoute[n] = segsByRoute[n] || []).push(rec));
+            routeSegs.push(rec);
+
+            const mid = [(ll[0][0] + ll[ll.length - 1][0]) / 2, (ll[0][1] + ll[ll.length - 1][1]) / 2];
+            rec.label = {
+                seg: rec, center: true, priority: ROUTE_LABEL_PRIORITY, name: names.join(' '), text: null,
+                marker: L.marker(mid, {
+                    icon: L.divIcon({ html: '<span class="atc-label route-label"></span>',
+                                      className: 'atc-marker-wrapper', iconSize: [14, 14], iconAnchor: [7, 7] }),
+                    interactive: false, keyboard: false
+                })
+            };
+            routeLabels.push(rec.label);
         });
 
         // ─── RBL mode (range & bearing line) ───────────────────────────
@@ -1006,6 +1608,9 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
             const lbl = el.querySelector('.atc-label');
             if (fix) fix.classList.toggle(cls, on);
             if (lbl) lbl.classList.toggle(cls, on);
+            // Highlighted (yellow) fixes always show their label
+            rec[cls === 'rbl-selected' ? 'rblSelected' : 'rblHover'] = on;
+            scheduleDeclutter();
         }
         function setRblSelected(rec, on) { setRblClass(rec, 'rbl-selected', on); }
         function setRblHover(rec, on)    { setRblClass(rec, 'rbl-hover',    on); }
@@ -1175,33 +1780,93 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         // ─── Filters ───────────────────────────────────────────────────
         const filterIfr    = document.getElementById('filter-ifr');
         const filterVfr    = document.getElementById('filter-vfr');
+        const filterNavaid = document.getElementById('filter-navaid');
+        const filterApproach = document.getElementById('filter-approach');
         const filterLabels = document.getElementById('filter-labels');
+        const filterRoutes      = document.getElementById('filter-routes');
+        const filterRoutesLower = document.getElementById('filter-routes-lower');
+        const filterRoutesUpper = document.getElementById('filter-routes-upper');
+        const filterRoutesConv  = document.getElementById('filter-routes-conv');
+        const filterRoutesRnav  = document.getElementById('filter-routes-rnav');
+        const routeTypes = (routes && routes.types) || {};
+        const filterRouteNames  = document.getElementById('filter-route-names');
+
+        function routeShownByFilters(n) {
+            return n === routeSearch || (filterRoutes.checked &&
+                (isUpperRoute(n) ? filterRoutesUpper.checked : filterRoutesLower.checked) &&
+                (routeTypes[n] === 'rnav' ? filterRoutesRnav.checked : filterRoutesConv.checked));
+        }
+
+        // Label text = the visible routes on that segment, e.g. "A857 · UN857"
+        function updateRouteLabels() {
+            const on = filterRouteNames.checked && map.getZoom() >= ROUTE_LABEL_MIN_ZOOM;
+            routeLabels.forEach(rec => {
+                const text = on && routesLayer.hasLayer(rec.seg.group)
+                    ? rec.seg.names.filter(routeShownByFilters).map(n => n.replace(/\s+/g, '')).join(' · ')
+                    : '';
+                if (text) {
+                    if (!routeLabelLayer.hasLayer(rec.marker)) routeLabelLayer.addLayer(rec.marker);
+                    const lbl = labelEl(rec);
+                    if (lbl && rec.text !== text) { lbl.textContent = text; rec.text = text; }
+                    if (lbl) lbl.classList.toggle('route-label-hl', rec.seg.hl);
+                } else if (routeLabelLayer.hasLayer(rec.marker)) {
+                    routeLabelLayer.removeLayer(rec.marker);
+                    rec.text = null;
+                }
+            });
+        }
         const searchInput  = document.getElementById('search');
 
         function applyFilters() {
-            const showIfr    = filterIfr.checked;
-            const showVfr    = filterVfr.checked;
-            const search     = searchInput.value.toUpperCase().trim();
+            const show = {
+                ifr:    filterIfr.checked,
+                vfr:      filterVfr.checked,
+                approach: filterApproach.checked,
+                navaid:   filterNavaid.checked,
+            };
+            const search = searchInput.value.toUpperCase().trim();
+
+            // A search for a route designator ("UG5", "a 600 f") highlights
+            // that route and keeps the fixes along it visible.
+            routeSearch = search ? (Object.keys(segsByRoute).find(d => normRoute(d) === normRoute(search)) || null) : null;
+            const onRoute = new Set(routeSearch ? routePoints[routeSearch] || [] : []);
+            refreshRouteStyles();
+            routeSegs.forEach(rec => {
+                const visible = rec.names.some(routeShownByFilters);
+                if (visible && !routesLayer.hasLayer(rec.group)) routesLayer.addLayer(rec.group);
+                if (!visible && routesLayer.hasLayer(rec.group)) routesLayer.removeLayer(rec.group);
+            });
+            updateRouteLabels();
 
             markers.forEach(rec => {
-                const categoryOk = (rec.category === 'ifr' && showIfr) ||
-                                   (rec.category === 'vfr' && showVfr);
-                const searchOk = !search || rec.name.includes(search);
-                const layer = rec.category === 'vfr' ? vfrLayer : ifrLayer;
+                const categoryOk = show[rec.category];
+                const searchOk = !search || rec.search.includes(search) ||
+                                 onRoute.has(rec.name) || (rec.idents || []).some(i => onRoute.has(i));
+                const layer = layers[rec.category];
                 if (categoryOk && searchOk) {
                     if (!layer.hasLayer(rec.marker)) layer.addLayer(rec.marker);
                 } else {
                     if (layer.hasLayer(rec.marker)) layer.removeLayer(rec.marker);
                 }
             });
+            scheduleDeclutter();
         }
 
         function applyLabelVisibility() {
             document.body.classList.toggle('labels-hidden', !filterLabels.checked);
+            scheduleDeclutter();
         }
 
         filterIfr.addEventListener('change',    applyFilters);
         filterVfr.addEventListener('change',    applyFilters);
+        filterNavaid.addEventListener('change', applyFilters);
+        filterApproach.addEventListener('change', applyFilters);
+        filterRoutes.addEventListener('change', applyFilters);
+        filterRoutesLower.addEventListener('change', applyFilters);
+        filterRoutesUpper.addEventListener('change', applyFilters);
+        filterRouteNames.addEventListener('change', () => { updateRouteLabels(); scheduleDeclutter(); });
+        filterRoutesConv.addEventListener('change', applyFilters);
+        filterRoutesRnav.addEventListener('change', applyFilters);
         filterLabels.addEventListener('change', applyLabelVisibility);
         searchInput.addEventListener('input',   applyFilters);
 
@@ -1210,18 +1875,212 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
             if (e.key !== 'Enter') return;
             const term = searchInput.value.toUpperCase().trim();
             if (!term) return;
-            const exact = markers.find(m => m.name === term);
-            const partial = exact || markers.find(m => m.name.includes(term));
+            const exact = markers.find(m => m.name === term ||
+                                            (m.idents && m.idents.includes(term)));
+            // A route designator zooms to the whole route
+            if (!exact && routeSearch) {
+                const bounds = L.latLngBounds([]);
+                segsByRoute[routeSearch].forEach(rec => bounds.extend(rec.line.getBounds()));
+                map.flyToBounds(bounds, { padding: [60, 60], duration: 0.6 });
+                return;
+            }
+            const partial = exact || markers.find(m => m.search.includes(term));
             if (partial) {
+                // If the fix's category is filtered out (e.g. approach-only),
+                // switch that filter on so the fix is actually visible
+                const box = {
+                    ifr: filterIfr, vfr: filterVfr,
+                    approach: filterApproach, navaid: filterNavaid
+                }[partial.category];
+                if (box && !box.checked) {
+                    box.checked = true;
+                    applyFilters();
+                }
                 map.flyTo(partial.marker.getLatLng(), 9, { duration: 0.6 });
                 if (!document.body.classList.contains('rbl-active')) {
                     L.popup({ closeButton: true, maxWidth: 320 })
                         .setLatLng(partial.marker.getLatLng())
-                        .setContent(buildPopup(partial.props, partial.coords))
+                        .setContent(partial.popupHtml)
                         .openOn(map);
                 }
             }
         });
+
+        // ─── Label decluttering ────────────────────────────────────────
+        // Labels are placed in priority order (transfer points → navaids → IFR
+        // → VFR). A label goes to the right of its symbol; if that overlaps a
+        // label already placed, high-level fixes try above, then below the
+        // symbol. Once a label has moved it keeps that spot at every zoom level
+        // (while it fits). If no spot is free the label is hidden (the symbol
+        // always stays). Symbols are not obstacles. Re-run after every zoom.
+        function labelEl(rec) {
+            const el = rec.marker.getElement();
+            return el ? el.querySelector('.atc-label') : null;
+        }
+
+        function rectsOverlap(a, b, pad = 2) {
+            return !(a.right + pad < b.left || b.right + pad < a.left ||
+                     a.bottom + pad < b.top || b.bottom + pad < a.top);
+        }
+
+        // Screen rect of a label in a given position, from the 14px icon box
+        // (matches the CSS: right = left 11px / top -3px; above / below =
+        // centred, top -15px / +15px).
+        const LABEL_TOP = { right: -3, above: -15, below: 15 };
+        function labelRectAt(box, w, h, pos) {
+            if (pos === 'center') {   // airway labels sit centred on the icon point
+                const left = box.left + 7 - w / 2, top = box.top + 7 - h / 2;
+                return { left: left, top: top, right: left + w, bottom: top + h };
+            }
+            const left = pos === 'right' ? box.left + 11 : box.left + 7 - w / 2;
+            const top  = box.top + LABEL_TOP[pos];
+            return { left: left, top: top, right: left + w, bottom: top + h };
+        }
+
+        // Positions to try, in order
+        function candidatePositions(rec) {
+            if (rec.center) return ['center'];
+            if (rec.fixedAbove) return ['above'];
+            if (!rec.canMoveUp) return ['right'];
+            const all = ['right', 'above', 'below'];
+            // A label that moved before tries its last spot first
+            return rec.stickyPos ? [rec.stickyPos, ...all.filter(p => p !== rec.stickyPos)] : all;
+        }
+
+        // Part of a screen segment inside the map view (Liang–Barsky clipping)
+        function clipToView(a, b, pad) {
+            const size = map.getSize();
+            const [x0, y0, x1, y1] = [pad, pad, size.x - pad, size.y - pad];
+            const dx = b.x - a.x, dy = b.y - a.y;
+            let t0 = 0, t1 = 1;
+            for (const [p, q] of [[-dx, a.x - x0], [dx, x1 - a.x], [-dy, a.y - y0], [dy, y1 - a.y]]) {
+                if (p === 0) { if (q < 0) return null; continue; }
+                const t = q / p;
+                if (p < 0) { if (t > t1) return null; if (t > t0) t0 = t; }
+                else       { if (t < t0) return null; if (t < t1) t1 = t; }
+            }
+            return [L.point(a.x + t0 * dx, a.y + t0 * dy), L.point(a.x + t1 * dx, a.y + t1 * dy)];
+        }
+
+        // Each airway label goes to the middle of the visible part of its line
+        function placeRouteLabels() {
+            routeLabels.forEach(rec => {
+                if (!routeLabelLayer.hasLayer(rec.marker)) return;
+                const ll = rec.seg.line.getLatLngs();
+                const part = clipToView(map.latLngToContainerPoint(ll[0]),
+                                        map.latLngToContainerPoint(ll[ll.length - 1]), 20);
+                rec.visibleLength = part ? part[0].distanceTo(part[1]) : 0;
+                if (part) rec.marker.setLatLng(map.containerPointToLatLng(part[0].add(part[1]).divideBy(2)));
+            });
+        }
+
+        function declutter() {
+            placeRouteLabels();
+            const fixes = markers.filter(r => layers[r.category].hasLayer(r.marker));
+            const visible = (filterLabels.checked ? fixes : [])
+                .concat(routeLabels.filter(r => routeLabelLayer.hasLayer(r.marker)));
+            if (!visible.length) return;
+            // Write phase: reset classes. Read phase: measure. Then decide.
+            visible.forEach(rec => {
+                const lbl = labelEl(rec);
+                if (lbl) lbl.classList.remove('declutter-hidden', 'hover-suppressed', 'hover-reveal');
+            });
+            visible.forEach(rec => {
+                const el = rec.marker.getElement();
+                const lbl = labelEl(rec);
+                if (!el || !lbl) { rec.measure = null; return; }
+                const r = lbl.getBoundingClientRect();
+                rec.measure = { box: el.getBoundingClientRect(), w: r.width, h: r.height };
+            });
+            // Fixes highlighted in RBL mode (yellow) come first and always show
+            const isHighlighted = r => !!(r.rblSelected || r.rblHover);
+            const rank = r => isHighlighted(r) ? -Infinity : r.priority;
+            visible.sort((a, b) => rank(a) - rank(b) || a.name.localeCompare(b.name));
+            const placed = [];
+            // airway labels also keep clear of fix symbols
+            const symbols = fixes.map(r => r.marker.getElement())
+                .filter(Boolean).map(el => el.querySelector('.atc-fix').getBoundingClientRect());
+            visible.forEach(rec => {
+                const m = rec.measure;
+                if (!m) { rec.labelRect = null; return; }
+                if (rec.center) {
+                    const rect = labelRectAt(m.box, m.w, m.h, 'center');
+                    // visible part too short for its label, or something already there
+                    if (rec.visibleLength < m.w + 30 || placed.some(r => rectsOverlap(r, rect)) ||
+                        symbols.some(r => rectsOverlap(r, rect, 1))) {
+                        labelEl(rec).classList.add('declutter-hidden');
+                        rec.labelRect = null;
+                    } else {
+                        placed.push(rect);
+                        rec.labelRect = rect;
+                    }
+                    return;
+                }
+                const options = candidatePositions(rec);
+                let pos = isHighlighted(rec) ? options[0] : null;
+                if (!pos) {
+                    pos = options.find(p => !placed.some(r =>
+                        rectsOverlap(r, labelRectAt(m.box, m.w, m.h, p))));
+                }
+                const lbl = labelEl(rec);
+                // Hidden labels keep their preferred spot, used when hovered
+                const shownPos = pos || options[0];
+                lbl.classList.toggle('above', shownPos === 'above');
+                lbl.classList.toggle('below', shownPos === 'below');
+                rec.labelRect = labelRectAt(m.box, m.w, m.h, shownPos);
+                if (pos) {
+                    placed.push(rec.labelRect);
+                    if (pos !== 'right' && !rec.fixedAbove) rec.stickyPos = pos;
+                } else {
+                    lbl.classList.add('declutter-hidden');
+                }
+            });
+        }
+
+        let declutterQueued = false;
+        function scheduleDeclutter() {
+            if (declutterQueued) return;
+            declutterQueued = true;
+            requestAnimationFrame(() => { declutterQueued = false; declutter(); });
+        }
+
+        // Hovering a fix whose label was hidden: show it, and hide the labels
+        // it overlaps until the mouse leaves.
+        function revealLabel(rec) {
+            const lbl = labelEl(rec);
+            if (!lbl || !rec.labelRect || !lbl.classList.contains('declutter-hidden')) return;
+            lbl.classList.add('hover-reveal');
+            rec.suppressed = markers.filter(o => {
+                if (o === rec || !o.labelRect || !layers[o.category].hasLayer(o.marker)) return false;
+                const ol = labelEl(o);
+                return ol && !ol.classList.contains('declutter-hidden') &&
+                       rectsOverlap(o.labelRect, rec.labelRect);
+            });
+            rec.suppressed.forEach(o => labelEl(o).classList.add('hover-suppressed'));
+        }
+
+        function unrevealLabel(rec) {
+            const lbl = labelEl(rec);
+            if (lbl) lbl.classList.remove('hover-reveal');
+            (rec.suppressed || []).forEach(o => {
+                const ol = labelEl(o);
+                if (ol) ol.classList.remove('hover-suppressed');
+            });
+            rec.suppressed = null;
+        }
+
+        map.on('zoomend', () => { updateRouteLabels(); scheduleDeclutter(); });
+        map.on('moveend', scheduleDeclutter);   // airway labels follow the visible part of their line
+        window.addEventListener('resize', scheduleDeclutter);
+        // Initial pass: apply the filters and the Fix Name box as they are,
+        // then declutter again once the label font has loaded (label widths
+        // change when JetBrains Mono replaces the fallback font).
+        applyLabelVisibility();
+        applyFilters();
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(scheduleDeclutter);
+        }
+        window.addEventListener('load', scheduleDeclutter);
 
         // ─── Cursor coordinates readout ────────────────────────────────
         const coordsEl = document.getElementById('cursor-coords');
@@ -1247,9 +2106,9 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 # ─── HTML emission ─────────────────────────────────────────────────────────
 
 def create_map(geojson_data, output_path="waypoints_map.html",
-               borders_data=None, sectors_data=None,
-               title="Infrastructure", subtitle="FIR"):
-    """Create a standalone HTML map file from waypoint + borders + sectors GeoJSON."""
+               borders_data=None, sectors_data=None, navaids_data=None,
+               routes_data=None, title="Infrastructure", subtitle="FIR"):
+    """Create a standalone HTML map file from waypoint + borders + sectors + navaids + routes GeoJSON."""
     features = geojson_data.get("features", [])
     bbox = waypoint_bbox(features)
     view = {
@@ -1259,14 +2118,26 @@ def create_map(geojson_data, output_path="waypoints_map.html",
         "max_lat": bbox[3] + VIEW_PADDING_DEG,
     }
     stats = compute_stats(features)
+    waypoints_out = prepare_waypoints(geojson_data)
+    navaids_out = prepare_navaids(navaids_data)
+    routes_out = prepare_routes(routes_data, geojson_data, navaids_data)
+    if routes_out:
+        waypoints_out["features"] += routes_out.pop("extra_points")
+    add_route_point_details(routes_data, waypoints_out, navaids_out)
+    stats["navaid"] = len((navaids_out or {}).get("features", []))
+    stats["routes"] = routes_out["count"] if routes_out else 0
+    stats["approach"] = sum(1 for f in waypoints_out["features"]
+                            if f["properties"]["_class"] == "approach")
 
     # Crop borders to waypoint extent + padding to keep the embedded payload small
     cropped_borders = crop_geojson_to_bbox(borders_data, bbox, padding=BORDERS_CROP_PADDING_DEG)
 
     payload = {
-        "waypoints": geojson_data,
+        "waypoints": waypoints_out,
         "borders":   cropped_borders,
         "sectors":   sectors_data,
+        "navaids":   navaids_out,
+        "routes":    routes_out,
         "view":      view,
         "stats":     stats,
         "title":     title,
@@ -1287,6 +2158,9 @@ def create_map(geojson_data, output_path="waypoints_map.html",
         "borders_before": len((borders_data or {}).get("features", [])),
         "borders_after":  len((cropped_borders or {}).get("features", [])),
         "sectors":   len((sectors_data or {}).get("features", [])),
+        "navaids":   stats["navaid"],
+        "routes":    stats["routes"],
+        "route_segments": len(routes_out["segments"]) if routes_out else 0,
         "view":      view,
         "stats":     stats,
     }
@@ -1295,7 +2169,7 @@ def create_map(geojson_data, output_path="waypoints_map.html",
 # ─── CLI ───────────────────────────────────────────────────────────────────
 
 def main(geojson_path, output_path="waypoints_map.html",
-         borders_path=None, sectors_path=None):
+         borders_path=None, sectors_path=None, navaids_path=None, routes_path=None):
     print("─" * 60)
     print("ATC Display Map Generator")
     print("─" * 60)
@@ -1316,19 +2190,34 @@ def main(geojson_path, output_path="waypoints_map.html",
     else:
         print("Loaded sectors:    none")
 
+    navaids_data = load_geojson_optional(navaids_path or DEFAULT_NAVAIDS_PATH)
+    if navaids_data:
+        print(f"Loaded navaids:    {len(navaids_data.get('features', []))} features")
+    else:
+        print("Loaded navaids:    none")
+
+    routes_data = load_geojson_optional(routes_path or DEFAULT_ROUTES_PATH)
+    if routes_data:
+        print(f"Loaded routes:     {len(routes_data.get('features', []))} features")
+    else:
+        print("Loaded routes:     none (run route_parser.py to make routes.geojson)")
+
     print(f"\nGenerating map → {output_path}")
-    result = create_map(geojson_data, output_path, borders_data, sectors_data)
+    result = create_map(geojson_data, output_path, borders_data, sectors_data, navaids_data,
+                        routes_data)
 
     print()
     print(f"  Stats:     IFR={result['stats']['ifr']}  "
           f"VFR={result['stats']['vfr']}  "
-          f"Conflicts={result['stats']['conflict']}  "
           f"Total={result['stats']['total']}")
     print(f"  View:      lat [{result['view']['min_lat']:.2f}, {result['view']['max_lat']:.2f}], "
           f"lon [{result['view']['min_lon']:.2f}, {result['view']['max_lon']:.2f}]")
     print(f"  Borders:   {result['borders_after']}/{result['borders_before']} kept after "
           f"{BORDERS_CROP_PADDING_DEG}° crop")
     print(f"  Sectors:   {result['sectors']}")
+    print(f"  Navaids:   {result['navaids']} (marine NDBs left off)")
+    print(f"  Routes:    {result['routes']} ATS routes on {result['route_segments']} drawn segments")
+    print(f"  Approach:  {result['stats']['approach']} approach-only fixes (hidden by default)")
     print()
     print(f"Output: {output_path}")
     print("─" * 60)
@@ -1336,17 +2225,19 @@ def main(geojson_path, output_path="waypoints_map.html",
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python visualize_waypoints.py <waypoints.geojson> "
-              "[output.html] [borders.geojson] [sectors.geojson]")
+        print("Usage: python page_generator.py <waypoints.geojson> "
+              "[output.html] [borders.geojson] [sectors.geojson] [navaids.geojson] [routes.geojson]")
         sys.exit(1)
 
     waypoints_arg = sys.argv[1]
     output_arg    = sys.argv[2] if len(sys.argv) > 2 else "waypoints_map.html"
     borders_arg   = sys.argv[3] if len(sys.argv) > 3 else None
     sectors_arg   = sys.argv[4] if len(sys.argv) > 4 else None
+    navaids_arg   = sys.argv[5] if len(sys.argv) > 5 else None
+    routes_arg    = sys.argv[6] if len(sys.argv) > 6 else None
 
     if not Path(waypoints_arg).exists():
         print(f"Error: waypoints file not found: {waypoints_arg}")
         sys.exit(1)
 
-    main(waypoints_arg, output_arg, borders_arg, sectors_arg)
+    main(waypoints_arg, output_arg, borders_arg, sectors_arg, navaids_arg, routes_arg)
