@@ -340,7 +340,26 @@
         .speed-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
         .speed-input { -moz-appearance: textfield; }
 
-        .filter-box { top: 12px; right: 12px; min-width: 200px; }
+        .filter-box {
+            top: 12px; right: 12px; min-width: 200px;
+            max-height: calc(100vh - 110px);   /* stays clear of the zoom buttons */
+            overflow-y: auto;
+        }
+        .filter-box h4.spaced { margin-top: 12px; display: flex; align-items: baseline; }
+        .sector-clear {
+            margin-left: auto;
+            background: none;
+            border: none;
+            padding: 0;
+            color: var(--text-dim);
+            font: inherit;
+            letter-spacing: inherit;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .sector-clear:hover { color: var(--accent); }
+        .sector-clear[hidden] { display: none; }
+        .sector-hint { font-size: 10.5px; color: var(--text-dim); margin: 2px 0 4px; }
         .filter-item {
             display: flex;
             align-items: center;
@@ -623,6 +642,13 @@
             <input type="checkbox" autocomplete="off" id="filter-route-names" checked />
             <span>Route Name</span>
         </label>
+        <div id="sector-filter-box" hidden>
+            <h4 class="spaced">Sectors
+                <button class="sector-clear" id="sector-clear" type="button" hidden>Show all</button>
+            </h4>
+            <div class="sector-hint" id="sector-hint">Tick sectors to show only what's inside</div>
+            <div id="sector-filters"></div>
+        </div>
     </div>
 
     <div class="panel legend">
@@ -774,31 +800,28 @@
         }
 
         // ─── Sectors layer (+ centroid labels) ─────────────────────────
-        if (sectors) {
-            L.geoJSON(sectors, {
-                style: {
-                    color: '#3eb5d4',
-                    weight: 1.2,
-                    fillColor: '#3eb5d4',
-                    fillOpacity: 0.04,
-                    opacity: 0.55,
-                    dashArray: '3,4',
-                    lineJoin: 'round'
-                },
-                interactive: false
-            }).addTo(map);
+        const SECTOR_STYLE     = { color: '#3eb5d4', weight: 1.2, fillColor: '#3eb5d4', fillOpacity: 0.04,
+                                   opacity: 0.55, dashArray: '3,4', lineJoin: 'round' };
+        const SECTOR_STYLE_SEL = { ...SECTOR_STYLE, weight: 1.8, fillOpacity: 0.10, opacity: 0.95, dashArray: null };
+        const SECTOR_STYLE_OFF = { ...SECTOR_STYLE, fillOpacity: 0, opacity: 0.25 };
+        const sectorList = [];   // { name, short, rings, layer, label }
 
-            // Sector name labels
+        if (sectors) {
             sectors.features.forEach(feat => {
-                const name = (feat.properties || {}).name;
-                if (!name) return;
                 const geom = feat.geometry || {};
-                let coords = null;
-                if (geom.type === 'Polygon') coords = geom.coordinates;
-                else if (geom.type === 'MultiPolygon') coords = geom.coordinates[0];
-                if (!coords) return;
-                const [cx, cy] = polygonCentroid(coords);
-                L.marker([cy, cx], {
+                const polys = geom.type === 'Polygon' ? [geom.coordinates]
+                            : geom.type === 'MultiPolygon' ? geom.coordinates : [];
+                if (!polys.length) return;
+                const name = (feat.properties || {}).name || `Sector ${sectorList.length + 1}`;
+                const rec = {
+                    name,
+                    short: name.split(' / ')[0].replace(/\s+Sector$/i, ''),   // "Oceanic North"
+                    polys,
+                    layer: L.geoJSON(feat, { style: SECTOR_STYLE, interactive: false }).addTo(map),
+                    label: null
+                };
+                const [cx, cy] = polygonCentroid(polys[0]);
+                rec.label = L.marker([cy, cx], {
                     icon: L.divIcon({
                         html: `<div class="sector-label">${escapeHtml(name)}</div>`,
                         className: 'atc-marker-wrapper',
@@ -808,7 +831,68 @@
                     interactive: false,
                     keyboard: false
                 }).addTo(map);
+                sectorList.push(rec);
             });
+        }
+
+        // ─── Sector geometry (which sector a fix / route lies in) ──────
+        // Lon/lat are scaled to NM around each test point, fine at sector size.
+        const SECTOR_EDGE_NM = 2;   // fixes this close to a boundary count as inside
+
+        function inRing(lon, lat, ring) {
+            let inside = false;
+            for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+                const [xi, yi] = ring[i], [xj, yj] = ring[j];
+                if ((yi > lat) !== (yj > lat) &&
+                    lon < (xj - xi) * (lat - yi) / (yj - yi) + xi) inside = !inside;
+            }
+            return inside;
+        }
+
+        function inPolys(lon, lat, polys) {
+            // outer ring in, no hole contains it
+            return polys.some(p => inRing(lon, lat, p[0]) && !p.slice(1).some(h => inRing(lon, lat, h)));
+        }
+
+        function nmToEdge(lon, lat, polys) {
+            const kx = 60 * Math.cos(lat * Math.PI / 180), ky = 60;
+            let best = Infinity;
+            polys.forEach(p => p.forEach(ring => {
+                for (let i = 1; i < ring.length; i++) {
+                    const ax = (ring[i - 1][0] - lon) * kx, ay = (ring[i - 1][1] - lat) * ky;
+                    const bx = (ring[i][0] - lon) * kx,     by = (ring[i][1] - lat) * ky;
+                    const dx = bx - ax, dy = by - ay, len2 = dx * dx + dy * dy;
+                    const t = len2 ? Math.max(0, Math.min(1, -(ax * dx + ay * dy) / len2)) : 0;
+                    best = Math.min(best, Math.hypot(ax + t * dx, ay + t * dy));
+                }
+            }));
+            return best;
+        }
+
+        // Indexes of the sectors a fix belongs to (boundary fixes belong to both)
+        function sectorsOfPoint(lon, lat) {
+            const out = [];
+            sectorList.forEach((s, i) => {
+                if (inPolys(lon, lat, s.polys) || nmToEdge(lon, lat, s.polys) <= SECTOR_EDGE_NM) out.push(i);
+            });
+            return out;
+        }
+
+        // Indexes of the sectors a route line passes through: the line is
+        // sampled every ~2 NM, so a segment that only touches a corner or ends
+        // on the boundary does not count.
+        function sectorsOfLine(coords) {
+            const hit = new Set();
+            for (let k = 1; k < coords.length; k++) {
+                const [x0, y0] = coords[k - 1], [x1, y1] = coords[k];
+                const nm = Math.hypot((x1 - x0) * 60 * Math.cos(y0 * Math.PI / 180), (y1 - y0) * 60);
+                const n = Math.max(2, Math.ceil(nm / 2));
+                for (let s = 1; s < n; s++) {
+                    const t = s / n, lon = x0 + t * (x1 - x0), lat = y0 + t * (y1 - y0);
+                    sectorList.forEach((sec, i) => { if (!hit.has(i) && inPolys(lon, lat, sec.polys)) hit.add(i); });
+                }
+            }
+            return [...hit];
         }
 
         // ─── Waypoint markers ──────────────────────────────────────────
@@ -923,6 +1007,7 @@
             });
             record.marker = marker;
             record.coords = coords;
+            record.sectors = sectorsOfPoint(coords[0], coords[1]);
             record.popupHtml = popupHtml;
             markers.push(record);
 
@@ -1181,7 +1266,8 @@
             const hit  = L.polyline(ll, { color: '#000', opacity: 0, weight: 10, className: 'route-hit' });
             const names = [...new Set(seg.routes.map(r => r.route))];
             const rec = { names, line, hit, group: L.layerGroup([line, hit]),
-                          popupHtml: buildRoutePopup(seg), hl: false };
+                          popupHtml: buildRoutePopup(seg), hl: false,
+                          sectors: sectorsOfLine(seg.coords) };
             hit.bindTooltip(names.join(' · '), {
                 sticky: true, direction: 'top', offset: [0, -8], className: 'route-tooltip'
             });
@@ -1465,6 +1551,50 @@
         }
         const searchInput  = document.getElementById('search');
 
+        // ─── Sector filter: tick sectors → only what lies inside them ──
+        // Nothing ticked = no sector filter. A searched route is still shown whole.
+        const selectedSectors = new Set();
+        const sectorClear = document.getElementById('sector-clear');
+        const sectorHint  = document.getElementById('sector-hint');
+        const inSelectedSectors = rec => !selectedSectors.size || rec.sectors.some(i => selectedSectors.has(i));
+
+        function refreshSectorStyles() {
+            sectorList.forEach((s, i) => {
+                const on = selectedSectors.has(i);
+                s.layer.setStyle(!selectedSectors.size ? SECTOR_STYLE : on ? SECTOR_STYLE_SEL : SECTOR_STYLE_OFF);
+                s.label.setOpacity(!selectedSectors.size || on ? 1 : 0.35);
+            });
+            sectorClear.hidden = !selectedSectors.size;
+            sectorHint.hidden  = !!selectedSectors.size;
+        }
+
+        if (sectorList.length) {
+            document.getElementById('sector-filter-box').hidden = false;
+            const box = document.getElementById('sector-filters');
+            sectorList.forEach((s, i) => {
+                const label = document.createElement('label');
+                label.className = 'filter-item';
+                label.title = s.name;
+                label.innerHTML = `<input type="checkbox" autocomplete="off" /><span>${escapeHtml(s.short)}</span>`;
+                const cb = label.querySelector('input');
+                cb.addEventListener('change', () => {
+                    if (cb.checked) selectedSectors.add(i); else selectedSectors.delete(i);
+                    refreshSectorStyles();
+                    applyFilters();
+                });
+                s.checkbox = cb;
+                box.appendChild(label);
+            });
+            sectorClear.addEventListener('click', () => clearSectorFilter());
+        }
+
+        function clearSectorFilter() {
+            selectedSectors.clear();
+            sectorList.forEach(s => { s.checkbox.checked = false; });
+            refreshSectorStyles();
+            applyFilters();
+        }
+
         function applyFilters() {
             const show = {
                 ifr:    filterIfr.checked,
@@ -1480,7 +1610,8 @@
             const onRoute = new Set(routeSearch ? routePoints[routeSearch] || [] : []);
             refreshRouteStyles();
             routeSegs.forEach(rec => {
-                const visible = rec.names.some(routeShownByFilters);
+                const visible = rec.names.includes(routeSearch) ||
+                                (rec.names.some(routeShownByFilters) && inSelectedSectors(rec));
                 if (visible && !routesLayer.hasLayer(rec.group)) routesLayer.addLayer(rec.group);
                 if (!visible && routesLayer.hasLayer(rec.group)) routesLayer.removeLayer(rec.group);
             });
@@ -1488,10 +1619,11 @@
 
             markers.forEach(rec => {
                 const categoryOk = show[rec.category];
-                const searchOk = !search || rec.search.includes(search) ||
-                                 onRoute.has(rec.name) || (rec.idents || []).some(i => onRoute.has(i));
+                const alongRoute = onRoute.has(rec.name) || (rec.idents || []).some(i => onRoute.has(i));
+                const searchOk = !search || rec.search.includes(search) || alongRoute;
+                const sectorOk = alongRoute || inSelectedSectors(rec);
                 const layer = layers[rec.category];
-                if (categoryOk && searchOk) {
+                if (categoryOk && searchOk && sectorOk) {
                     if (!layer.hasLayer(rec.marker)) layer.addLayer(rec.marker);
                 } else {
                     if (layer.hasLayer(rec.marker)) layer.removeLayer(rec.marker);
@@ -1544,6 +1676,8 @@
                     box.checked = true;
                     applyFilters();
                 }
+                // Same if it lies outside the ticked sectors
+                if (!inSelectedSectors(partial)) clearSectorFilter();
                 map.flyTo(partial.marker.getLatLng(), 9, { duration: 0.6 });
                 if (!document.body.classList.contains('rbl-active')) {
                     L.popup({ closeButton: true, maxWidth: 320 })
